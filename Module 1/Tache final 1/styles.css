@@ -1,0 +1,151 @@
+body{
+    margin:0;
+    text-decoration:none;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} 
+.container{
+    width: 80%;
+    margin: 0px auto;
+}
+section{
+    margin: 40px 0;
+}
+h1{
+    margin-bottom:auto;
+    font-size:4em;
+}
+h2{
+    font-size:3em;
+    margin:0;
+    padding:0;
+}
+h3{
+    font-size:2em;
+}
+h1,
+h2,
+h3{
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+nav img{
+    width: 70px;
+    padding:15px 0;
+}
+.nav-options a{
+    font-size:1.1em ;
+    text-decoration:none;
+    color:rgb(3,48,89);
+    display:inline-block;
+    padding: 38.5px 3vw;
+}
+.nav-options{
+    display:inline-block;
+    vertical-align:top;
+}
+a:not(.nav-options a, footer a){
+    color:white;
+    background-color:rgb(3,48,89);
+    padding:10px 30px;
+    margin: 10px 0;
+    text-decoration:none;
+}
+
+.image-header{
+    background:url(img/new-york.jpg) no-repeat center/cover; 
+}
+.opacity{
+    background-color:rgba(0,0,0,0.5);
+    padding: 75px 0;
+}
+h1, header p, .image-header a{
+    color:white;
+    text-align:center;
+}
+.image-header a{
+    display: inline-block;
+}
+.container-parent{
+    text-align:center;
+}
+#histoire{
+    padding: 50px;
+}
+#histoire h2, #histoire p, #histoire cite{
+    text-align:center;
+}
+cite{
+    display:block;
+}
+q{
+    font-size:1.5em;
+}
+article{
+    background:rgb(229,229,229);
+    border-radius:10px;
+    padding:20px;
+    margin:10px 0;
+}
+article a{
+    display: inline-block;
+}
+h3{
+    padding:20px 0;
+    margin:0;
+    text-align:center;
+    clear:both;
+}
+.article-text{
+    width:75%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+article p{
+    margin:0;
+    padding:0;
+}
+.statue img,.building img{
+    padding:0px 10px 15px 10px;
+}
+.park img{
+    padding:0px 10px 15px 20px;
+}
+article img{
+    display:inline-block;
+    box-sizing:border-box;
+    width:25%;
+    vertical-align:top;
+}
+section > img{
+    width:25%;
+    padding: 5px;
+    box-sizing:border-box;
+}
+
+.galerie{
+    width:90%;
+}
+footer{
+    width:100%;
+    background-color:rgb(3, 90, 167);
+}
+
+.footer{
+    text-align: center;
+    padding:20px 0;
+}
+
+footer img{
+    width:50px;
+    display:inline-block;
+}
+footer p {
+    font-size:smaller;
+}
+footer a{
+    color:white;
+}
