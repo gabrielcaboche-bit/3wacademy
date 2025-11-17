@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home | Colors&co</title>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <input type="checkbox" id="theme-checkbox">
+    <div class="bg-body">
+        <header>
+          <div class="container">
+            <img src="assets/images/logo-blog.png" alt="Logo">
+        
+            <div class="right-side">
+              <!-- Thème -->
+              <div class="theme-wrapper">
+                <label for="theme-checkbox" class="theme-toggle">
+                  <i class="fa-regular fa-sun"></i>
+                  <i class="fa-regular fa-moon"></i>
+                </label>
+              </div>
+        
+              <!-- Menu -->
+              
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+              <label for="nav-toggle" class="menu-icon">
+                <i class="fa-solid fa-bars bars"></i>
+                <i class="fa-solid fa-xmark mark"></i>
+              </label>
+        
+              <!-- Navigation déplacée ici -->
+              <nav class="main-nav" aria-label="main">
+                <a href="index.html">Accueil</a>
+                <a href="colors.html">Blog</a>
+                <a href="contact.html">Contact</a>
+              </nav>
+            </div>
+          </div>
+        </header>
+        <main class="container">
+            <div class="title">
+                <h1>Mon blog d'astuces</h1>
+                <p>
+                    Les couleurs ne sont jamais choisies au hasard. Ce site vous invite à découvrir leur signification, 
+                    leur impact visuel et la façon dont les marques les utilisent pour créer une identité unique, 
+                    reconnaissable et inspirante, au cœur de la communication et du design moderne.
+                </p>
+                <a href="colors" class="button">Tous les articles du blog</a>
+            </div>
+            <div class="userInterface">
+                <h2>Interfaces Utilisateurs</h2>
+                <div class="userContainer">
+                    <div class="image">
+                        <img src="assets/images/card-colors.jpg" alt="Une explosion de poudre de couleurs">
+                        <div class="overlayTextImage">
+                            <p>07 mai 2024</p>
+                            <strong>La signification des couleurs</strong>
+                        </div>
+                    </div>
+                    <div class="colorCards">
+                    <a href="colorDetail.html" class="colorCard">
+                        <div class="color Lime"></div>
+                        <strong>Couleur Lime</strong>
+                    </a>
+                    <div class="colorCard">
+                        <div class="color Vert"></div>
+                        <strong>Couleur Vert</strong>
+                    </div>
+                    <div class="colorCard">
+                        <div class="color AvoGre"></div>
+                            <strong>Couleur Avocado Green</strong>
+                    </div>
+                </div>
+                </div>
+                <a href="colors.html" class="button">Toutes les couleurs</a>
+            </div>
+            <div class="videosContainer">
+                <h2>Integrations Web</h2>
+                <div class="videos">
+                    <div class="videoCard">
+                        <iframe class="video" src="https://www.youtube.com/embed/Zk0w32vJvyI?si=Dn3jjZxfzqdrFauo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="videoDesc">
+                            <p class="badge css">CSS</p>
+                            <p class="date">07 Mai 2024</p>
+                            <h3>Dark Mode</h3>
+                            <p>Apprenez à créer un mode sombre en HTML et CSS, sans JavaScript. Un tuto simple pour basculer entre thème clair et foncé avec du CSS pur.</p>
+                        </div>
+                    </div>
+                    <div class="videoCard">
+                        <iframe class="video" src="https://www.youtube.com/embed/Zk0w32vJvyI?si=Dn3jjZxfzqdrFauo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="videoDesc">
+                            <p class="badge html">HTML</p>
+                            <p class="badge css">CSS</p>
+                            <p class=date>07 Mai 2024</p>
+                            <h3>Menu Déroulant</h3>
+                            <p>Découvrez comment faire un menu déroulant fluide uniquement en HTML et CSS. Idéal pour une navigation légère et sans JavaScript.</p>
+                        </div>
+                    </div>
+                    <div class="videoCard">
+                        <video controls class="video mp4">
+                            <source src="assets/media/video/video.mp4" type="video/mp4">
+                            <source src="../video.webp" type="video/webp">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="videoDesc">
+                            <p class="badge html">HTML</p>
+                            <p class="badge css">CSS</p>
+                            <p class=date>07 Mai 2024</p>
+                            <h3>Menu Burger</h3>
+                            <p>Créez un menu burger responsive avec juste du HTML et CSS. Parfait pour mobile, sans une ligne de JavaScript.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="button">Tous les articles</a>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; Copyright - Charlène Delporte - 3W academy</p>
+        </footer>
+    </div>
+</body>
+
+</html>

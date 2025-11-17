@@ -1,0 +1,31 @@
+.body{background:grey;}
+.grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50% 50%
+}
+.grid img{
+    height: 100%;
+    width:100%;
+    object-fit:cover;    
+}
+.texte {
+    display:none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.texte:hover, .img1:hover ~ .texte {
+    display:block;
+    opacity: 1;
+    visibility: visible;
+}
+.texte{
+    padding:10px;
+}
+.texte a{
+    background:grey;
+    border-radius:10px;
+    padding:10px 20px;
+}

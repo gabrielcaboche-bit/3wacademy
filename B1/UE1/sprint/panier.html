@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BretzelHaus | Panier</title>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <a href="404.html"><img src="assets/media/images/logo-bretzel.png" alt="logo"></a>
+
+                <div class="right-side">
+                    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+                    <!-- Bouton compte -->
+                    <a class="accountButton" href="connexion.html#connexion">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </a>
+                    <a class="cartButton" href="panier.html">
+                        <i class="fa-solid fa-shopping-cart"></i>
+                    </a>
+
+                    <!-- Toggle du menu -->
+                    <label for="nav-toggle" class="menu-icon">
+                        <i class="fa-solid fa-bars bars"></i>
+                        <i class="fa-solid fa-xmark mark"></i>
+                    </label>
+
+                    <!-- Navigation principale -->
+                    <nav class="main-nav" aria-label="main">
+                        <a href="index.html"><i class="fa-solid fa-house"></i> Accueil</a>
+                        <a href="menu.html"><i class="fa-solid fa-utensils"></i> Menu</a>
+                        <a href="a-propos.html"><i class="fa-solid fa-circle-question"></i> À propos</a>
+                        <a href="Contact.html#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+                        <!-- Section profil affichée uniquement quand le menu est ouvert -->
+                        <div class="profile-section">
+                            <img src="https://i.pravatar.cc/150?img=12" alt="Photo de profil fictive">
+                            <a class="profile-link" href="connexion.html#connexion">Se connecter</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="panier">
+            <section class="panier-intro">
+                <h2>Panier</h2>
+                <div class="panier-achat">
+                    <article class="panier-txt">
+                        <p>Votre panier semble assez vide dis donc ?
+                            <p>
+                                <h1>(;-;)</h1>
+                                <p>N'hésitez surtout pas à aller voir nos excellentes spécialités.</p>
+                    </article>
+
+                    <article class="panier-btn">
+                        <a href="menu.html"> &#x261E; Cliquez ici &#x261C; </a>
+                        <a href="commandes.html"> &#x261E; Mes Commandes &#x261C; </a>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+        <footer>
+            <div class="titleFooter">
+                <img src="assets/media/images/logo-bretzel.png" alt="logo">
+                <p>BrezelHaus</p>
+            </div>
+            <div class="containerMapText">
+                <div class="containerText">
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="menu.html">Carte/Menu</a></li>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                        <li><a href="connexion.html#connexion">Mon Compte</a></li>
+                    </ul>
+                    <hr class="divider1" />
+                    <div class="socials">
+                        <strong>Réseaux</strong>
+                        <a><i class="fa-brands fa-square-facebook"></i> Facebook</a>
+                        <a><i class="fa-brands fa-square-instagram"></i> Instagram</a>
+                        <a><i class="fa-brands fa-square-twitter"></i> Twitter</a>
+                    </div>
+                    <hr class="divider2" />
+                    <form>
+                        <strong>Newsletter</strong>
+                        <input type="text" name="email" />
+                        <input type="submit" value="S'inscrire à la newsletter" />
+                    </form>
+                </div>
+                <div class="containerMap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d762.9711283209373!2d1.3840550999999919!3d44.736826800000024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12acbcdd0a092a13%3A0xf84b2c2a6825282f!2s46%20Bd%20Mainiol%2C%2046300%20Gourdon!5e1!3m2!1sfr!2sfr!4v1761048715564!5m2!1sfr!2sfr"
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p>46 bd Mainniol,</p>
+                    <p>46300 Gourdon</p>
+                    <p>+337.67.92.92.46</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

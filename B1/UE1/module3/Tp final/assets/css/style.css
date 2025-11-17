@@ -1,0 +1,670 @@
+:root{
+    --header-bg:#fff;
+    --header-title-bg: #d1d5db;
+    --bg-color:#fff;
+    --txt-color:black;
+}
+body:has(#theme-checkbox:checked){
+    --header-bg:#4a4a4a;
+    --header-title-bg: #d1d5db;
+    --bg-color:#a6a6a6;
+    --txt-color:white;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background: var(--bg-color);
+    color: var(--txt-color);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*----------------HEADER---------------------*/
+
+/* --- En-tête --- */
+
+.site-header {
+    background-color: var(--header-bg);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* --- Logo + slogan --- */
+
+.site-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.site-title a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--txt-color);
+}
+
+.tagline {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.25rem;
+    font-style: italic;
+}
+
+/* --- Checkbox invisible (menu) --- */
+
+.nav-toggle {
+    display: none;
+}
+
+/* --- Icône burger/croix --- */
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--txt-color);
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon .fa-xmark {
+    display: none;
+}
+
+/* --- Navigation principale --- */
+
+.main-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    background-color:var(--bg-color);
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 2rem 0;
+    gap: 2rem;
+    text-align: center;
+}
+
+.main-nav a {
+    color: var(--txt-color);
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: opacity 0.2s;
+}
+
+.main-nav a:hover {
+    opacity: 0.7;
+}
+
+/* --- Réseaux sociaux --- */
+
+.socials {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.socials a {
+    color: var(--txt-color);
+    font-size: 1.5rem;
+    transition: color 0.2s;
+}
+
+.socials a:hover {
+    color: #0f766e;
+}
+
+/* --- Thème visuel --- */
+
+.theme-toggle {
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background: black;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.4s, color 0.4s;
+}
+
+.theme-toggle i {
+    color: white;
+    font-size: 1.2rem;
+    position: absolute;
+    transition: opacity 0.3s;
+}
+
+.theme-toggle .fa-moon {
+    opacity: 0;
+}
+
+/* --- Checkbox invisible (thème) --- */
+
+#theme-checkbox {
+    display: none;
+}
+
+/* Quand on coche le thème */
+
+#theme-checkbox:checked+.theme-toggle {
+    background: white;
+    border: 2px solid black;
+}
+
+#theme-checkbox:checked+.theme-toggle .fa-sun {
+    opacity: 0;
+}
+
+#theme-checkbox:checked+.theme-toggle .fa-moon {
+    opacity: 1;
+    color: black;
+}
+
+/* --- Lien du thème et du menu --- */
+
+.theme-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* --- Checkbox activée => menu ouvert --- */
+
+.nav-toggle:checked~.menu-icon .fa-bars {
+    display: none;
+}
+
+.nav-toggle:checked~.menu-icon .fa-xmark {
+    display: inline;
+}
+
+.nav-toggle:checked~.main-nav {
+    display: flex;
+}
+
+/* --- Zone titre/intro --- */
+
+.title-box {
+    text-align: center;
+    background: #d6d6d6;
+    padding: 5vh 1rem;
+    margin-bottom: 35px;
+    color: black;
+}
+
+.title-box h1 {
+    font-size: 3rem;
+}
+
+.title-box q {
+    font-size: 1.5rem;
+}
+
+/*---------------------FOOTER-----------------------*/
+
+footer {
+    background: var(--header-bg);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer .logo {
+    color: var(--txt-color);
+    font-size: 3rem;
+}
+
+footer .logo-name {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .socials {
+    margin-top: 10px;
+    float: right;
+    clear: right;
+}
+
+footer .socials a {
+    color: black;
+    font-size: 2rem;
+}
+
+footer .logo-name,
+footer h4,
+footer .navigation a,
+footer .coordonnees p {
+    padding: 5px 0;
+}
+
+footer .navigation a {
+    display: block;
+}
+
+footer .columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*----------------------INDEX----------------------*/
+
+.home .img {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.home .img img {
+    height:70vh;
+}
+
+.home .paragraphe {
+    border-radius: 20px;
+    padding: 20px;
+    color:black;
+    background: lightgrey;
+}
+
+/*----------------------GALERIE----------------------*/
+
+/* SECTION GÉNÉRALE */
+
+.gallery-section {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 0 4rem;
+}
+
+.gallery-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    background-color: #d1d5db;
+    color: #111;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+}
+
+/* GRILLE GALLERY */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+}
+
+/* MASQUER LES INPUTS ET LES TEXTES PAR DÉFAUT */
+
+.gallery input[type="radio"],
+.gallery .texte,
+.gallery .blank {
+    display: none;
+}
+
+/* IMAGE LABEL */
+
+.gallery label.image-item {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery label.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+}
+
+/* HOVER & FOCUS */
+
+.gallery label.image-item:hover,
+.gallery input[type="radio"]:checked+.blank+label.image-item,
+.gallery input[type="radio"]:checked+label.image-item {
+    z-index: 3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* AFFICHAGE DU TEXTE LIÉ À L'IMAGE SÉLECTIONNÉE */
+
+.gallery input[type="radio"]:checked+.blank+label+.texte,
+.gallery input[type="radio"]:checked+label+.texte {
+    display: block;
+    margin-left: -5rem;
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.gallery input.end-2col:checked+.blank {
+    display: block;
+}
+
+/* STYLES DU TEXTE */
+
+.gallery .texte {
+    color: black;
+    border-radius: 20px;
+    background: lightgrey;
+    padding-left: 5rem;
+    padding-top: 2rem;
+}
+
+.gallery .texte h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.gallery .texte .artist {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    font-style: italic;
+}
+
+.gallery .texte .desc {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.gallery .texte a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.gallery .texte a:hover {
+    background-color: #333;
+}
+
+/*--------------------DETAILS-----------------------*/
+
+.section {
+    width: 90%;
+    margin: 0 auto;
+}
+.return{
+    display:flex;
+    text-decoration:none;
+    color:black;
+}
+
+.details .article2,
+.details .article3 {
+    display: none;
+}
+
+.details img {
+    max-height: 100%;
+    max-width: 100%;
+    align-self: center;
+    justify-self: center
+}
+
+.details .texte h2,
+.details .texte h3 {
+    margin-bottom: 10px;
+}
+
+
+/*---------------------CONTACT----------------------- */
+
+.contact .title-box {
+    padding: 2vh 1rem;
+}
+
+.contact-section h1 {
+    width: 100%;
+    /* permet de rester centrer en occupant tout l'espace qu'importe les médias query */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contact-section img {
+    display: block;
+    border-radius: 30px;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+.contact-section p {
+    font-family: sans-serif;
+    font-size: 1.2em;
+    border-radius: 20px;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.contact-section form {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #757575;
+    border-radius: 10px;
+    background-color: #e5e5e5;
+    padding: 15px;
+}
+
+.contact-section form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.contact-section form label {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+    font-weight: bold;
+    padding: 10px;
+    width: 100%;
+    border: 2px solid #633E3E;
+    border-radius: 10px;
+    background-color: #fdfafa;
+}
+
+.contact-section form div button {
+    font-weight: bold;
+    background-color: #fdfafa;
+    margin: 10px auto;
+    padding: 10px;
+    transition-duration: 1.25s;
+    /* transition hover green */
+}
+
+.contact-section form button:hover {
+    background-color: #A1D692;
+}
+
+.contact-section form div:last-child {
+    margin-bottom: 10px;
+    /* dernière marge de div trop grande par rapport a la border */
+}
+
+/*---------------RESPONSIVE-----------------------------*/
+
+/*  TABLET MOD : */
+
+@media screen and (min-width:600px) and (max-width:1023px) {
+    
+    .home .paragraphe {
+        width: 100%;
+        font-size: 1rem;
+    }
+    .contact-section {
+        width: 90%;
+        display: flex;
+        gap: 15px;
+    }
+    .contact-section form {
+        height: max-content;
+        width: 50%;
+    }
+    .contact-section .img-txt {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-section form {
+        float: right;
+    }
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .gallery input.end-2col:checked+.blank {
+        display: none;
+    }
+    .gallery input.end-3col:checked+.blank {
+        display: block;
+    }
+    .gallery input.end-4col:checked+.blank {
+        display: none;
+    }
+    .details img {
+        width: 100%;
+    }
+    footer .columns{
+        flex-direction:row;
+    }
+    footer .logo-name{
+        flex-direction:column;
+    }
+}
+
+
+/*  DESKTOP MOD : */
+
+@media screen and (min-width:1023px) {
+    
+    .home .paragraphe {
+        width: 100%;
+        font-size: 2rem;
+    }
+    .menu-icon {
+        display: none;
+    }
+
+    .main-nav {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: none;
+        gap: 2rem;
+        padding: 0;
+        align-items: center;
+    }
+
+    .socials {
+        margin-left: 1rem;
+    }
+
+    .theme-wrapper {
+        margin-left: 1rem;
+    }
+    .contact-section {
+        width: 90%;
+        display: flex;
+        gap: 15px;
+    }
+    .contact-section form {
+        height: max-content;
+        width: 50%;
+    }
+    .contact-section .img-txt {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact-section form {
+        float: right;
+    }
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .gallery input.end-2col:checked+.blank {
+        display: none;
+    }
+    .gallery input.end-3col:checked+.blank {
+        display: none;
+    }
+    .gallery input.end-4col:checked+.blank {
+        display: block;
+    }
+    .details .article2,
+    .details .article3 {
+        display: block;
+    }
+    .details h1 {
+        width: 100%;
+        text-align: center;
+        grid-column: span 2 / span 2;
+    }
+    .details .section {
+        display: grid;
+        grid-template-rows: auto auto 50vh 50vh 50vh;
+        grid-template-columns: 50% 50%;
+        gap: 30px;
+        overflow: hidden;
+    }
+    footer .columns{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: left;
+    }
+    footer .logo-name{
+        flex-direction:column;
+    }
+}

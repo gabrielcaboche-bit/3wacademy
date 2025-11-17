@@ -1,0 +1,155 @@
+
+/*intro-menus*/
+
+.cartes-menus {
+    text-align: center;
+    a {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 25px;
+        background-color: $color-title;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .intro-menus {
+        text-align: center;
+        padding: 60px;
+    
+    
+        h1 {
+            color: $color-dark-text;
+        }
+        
+        p {
+            color: $color-subtitle;
+    
+        }
+    }
+}
+
+/*grid des produits*/
+
+.produits {
+
+    h2 {
+        margin-left :35px;
+        color: $color-dark-text;
+    }
+
+    .grid-produits {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 25px;
+        padding: 30px;
+    }
+
+    article {
+        background-color: $color-bg;
+        border-radius: 15px;
+        overflow: hidden;
+        text-align: center;
+        padding-bottom: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    article:hover {
+        transform: scale(1.03);
+    }
+
+    img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    h3 {
+        color: $color-subtitle;
+        margin-top: 10px;
+    }
+
+    p {
+        color: $color-text;
+        padding: 5px;
+    }
+
+    span {
+        display: inline-block;
+        margin-top: 10px;
+        background-color: $color-accent-dark;
+        color: $color-text;
+        padding: 8px;
+        border-radius: 20px;
+    }
+}
+
+/*grid pour menus*/
+
+.nos-menus {
+    
+    h2 {
+         margin-left :35px;
+         color: $color-dark-text;
+    }
+    
+.grid-menus {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    padding: 30px;
+}
+
+    article {
+        background-color: $color-bg;
+        border-radius: 15px;
+        overflow: hidden;
+        text-align: center;
+        padding-bottom: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    article:hover {
+        transform: scale(1.03);
+    }
+
+    img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    h3 {
+        color: $color-subtitle;
+        margin-top: 10px;
+    }
+
+    p {
+       color: $color-text;
+       padding: 5px;
+    }
+
+    span {
+        display: inline-block;
+        margin-top: 10px;
+        background-color: $color-accent-dark;
+        color: $color-text;
+        padding: 8px;
+        border-radius: 20px;
+    }
+}
+
+/*notre carte de produits*/
+
+.carte-produits {
+    text-align: center;
+    padding: 40px;
+    color: $color-dark-text;
+    
+    img {
+        margin :20px;
+        border-radius: 10px;
+        width: 50%;
+    }
+}

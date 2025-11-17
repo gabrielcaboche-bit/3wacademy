@@ -1,0 +1,26 @@
+:root {
+	--color-title: #c33;
+	--bg-color:white;
+	--color-texte:black;
+}
+body{
+    background-color:var(--bg-color);
+    color:var(--color-texte);
+}
+
+h2 {
+	color: var(--color-title);
+}
+
+article h3 {
+	color: var(--color-title);
+}
+article{
+    background-color:var(--bg-color);
+    color:var(--);
+}
+.inverse{
+    --color-title: #369;
+	--bg-color:black;
+	--color-texte: white;
+}

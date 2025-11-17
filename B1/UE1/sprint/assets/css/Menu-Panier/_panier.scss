@@ -1,0 +1,53 @@
+
+
+/*section-panier-1*/
+
+.panier .panier-intro {
+    background-color: $color-subtitle;
+    padding: 5px;
+
+    h2 {
+        margin-left: 10px;
+        color: $color-title;
+        font-family: "Delius Swash Caps", cursive;
+    }
+}
+
+/*div-panier-1*/
+
+.panier-achat {
+    background-color: $color-text;
+    font-family: "Delius Swash Caps", cursive;
+    text-align: center;
+    padding: 180px 0;
+    margin: 15px;
+
+    .panier-txt {
+        color: $color-subtitle;
+    }
+
+    p {
+        padding-bottom: 5px;
+    }
+
+    h1 {
+        padding-bottom: 40px;
+    }
+
+    .panier-btn {
+        padding: 5px;
+        margin: 15px;
+    }
+
+    a {
+        text-decoration: none;
+        border-radius: 10px;
+        padding: 5px;
+        color: $color-text;
+        background-color: $color-subtitle;
+    }
+
+    .panier-btn :hover {
+        color: $color-title;
+    }
+}

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Flexbox</title>
+<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+		ul {
+			padding: 0;
+			list-style: none;
+			border: 1px dashed;
+		}
+		li {
+			padding: 1em;
+		}
+		li:nth-child(1) {
+			background-color: #f33;
+		}
+		li:nth-child(2) {
+			background-color: #f53;
+		}
+		li:nth-child(3) {
+			background-color: #f73;
+		}
+		li:nth-child(4) {
+			background-color: #f93;
+		}
+		li:nth-child(5) {
+			background-color: #fb3;
+		}
+		li:nth-child(6) {
+			background-color: #fe3;
+		}
+		.test-1 {
+			display: flex;
+		}
+		.test-2 {
+			display: flex;
+			flex-direction:column;
+		}
+		.test-3 {
+			display: flex;
+			flex-direction:row-reverse;
+		}
+		.test-4 {
+			display: flex;
+			flex-direction:column-reverse;
+		}
+		.test-5 {
+		    width:200px;
+			display: flex;
+			flex-wrap:wrap;
+		}
+		.test-6 {
+		    width:200px;
+			display: flex;
+			flex-wrap:nowrap;
+		}
+		.test-7 {
+			display: flex;
+			justify-content:center;
+		}
+		.test-8 {
+			display: flex;
+			justify-content:flex-end;
+		}
+		.test-9 {
+			display: flex;
+			justify-content:space-between;
+		}
+</style>
+</head>
+<body>
+<ul class="test-1">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+    <li>item 6</li>
+</ul>
+<ul class="test-2">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+    <li>item 6</li>
+</ul>
+<ul class="test-3">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+    <li>item 6</li>
+</ul>
+<ul class="test-4">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+    <li>item 6</li>
+</ul>
+<ul class="test-5">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+    <li>item 6</li>
+</ul>
+<ul class="test-6">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+    <li>item 6</li>
+</ul>
+<ul class="test-7">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+    <li>item 6</li>
+</ul>
+<ul class="test-8">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+    <li>item 6</li>
+</ul>
+<ul class="test-9">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+    <li>item 6</li>
+</ul>
+
+</body>
+</html>

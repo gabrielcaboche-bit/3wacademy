@@ -1,0 +1,15 @@
+.infoBox{
+    background: $h-f-bg-color;
+    padding: 30px 20px;
+    border: $border;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    h1,
+    h2,
+    h3{
+        margin: initial;
+    }
+    strong{
+        margin: initial;
+    }
+}

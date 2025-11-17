@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Transform</title>
+	<style type="text/css">
+		div, article {
+			width: 10em;
+			margin: 5em auto;
+			padding: 3em;
+			border: 1px dashed;
+			background-color: #fc3;
+		}
+		@keyframes slideLeft {
+		    0% {
+		        transform: translateX(0);
+		    }
+		    50% {
+		        transform: translateX(100px);
+		    }
+		    100% {
+		        transform: translateX(100px) translateY(100px);
+				background-color: #f63;
+		    }
+		}
+		.test-1 {
+			animation: slideLeft 2s;
+			animation-delay: 2s;
+		}
+		@keyframes newspaper {
+			from {
+				transform: scale(0) rotate(-720deg);
+			}
+			to {
+				transform: scale(1) rotate(0deg);
+			}
+		}
+		.test-2 {
+			animation: newspaper 0.5s infinite alternate;
+			animation-delay: 2s;
+		}
+	</style>
+</head>
+<body>
+	<!-- div.test-$*5>lorem3 -->
+	<div class="test-1">Lorem ipsum dolor.</div>
+	<article class="test-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, ut, quo, unde dolores distinctio enim esse non maiores magnam quia similique adipisci ducimus optio perspiciatis omnis excepturi voluptas molestias architecto accusantium quisquam tempora nam id iure voluptatum eum a cupiditate! Amet, aliquam ipsam dicta quidem omnis consequatur laboriosam libero a!</article>
+</body>
+</html>

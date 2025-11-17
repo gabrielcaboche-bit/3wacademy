@@ -1,0 +1,28 @@
+@import 'userInterface';
+@import 'webIntegration';
+@include responsive(laptop){
+    .userContainer{
+        flex-direction: row!important;
+        .image{
+            width: 60%!important;
+            height: 25vw!important;
+        }
+        .colorCards{
+            width: 30%!important;
+            .colorCard{
+                height: 30%!important;
+            }
+        }
+    }
+    .videosContainer{
+        .videos{
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: none;
+            .videoCard{
+                .video{
+                    height: 20vw;
+                }
+            }
+        }
+    }
+}

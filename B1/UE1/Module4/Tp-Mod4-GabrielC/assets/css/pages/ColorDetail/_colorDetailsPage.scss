@@ -1,0 +1,47 @@
+@import 'card';
+.colorDetails{
+    header{
+        margin: 0;
+    }
+    .title{
+        padding: 0.5px;
+        background: lime;
+    }
+    .cardGallery{
+        display: initial;
+    }  
+    @include responsive(tablet){
+        .tabletMode{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .infoBox{
+                width: 45%!important;
+            }
+        }
+        .cardGallery{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+    }
+    @include responsive(laptop){
+        .contentDetails{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .laptopMode{
+                width: 40%;
+                & ~.infoText{
+                    width: 40%;
+                }
+            }
+            
+        }
+        .cardGallery{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+    }
+}

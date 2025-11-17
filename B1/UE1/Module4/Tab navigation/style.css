@@ -1,0 +1,23 @@
+*{
+    margin:0;
+    padding:0;
+}
+header{
+    background:black;
+    color:white;
+}
+article{
+    margin:2000px 0;
+}
+a{
+    position:absolute;
+    top:-100%;
+    left:0;
+    background:black;
+    color:white;
+    font-size:1.2em;
+    padding:10px 20px;
+}
+a:focus{
+    top:0;
+}

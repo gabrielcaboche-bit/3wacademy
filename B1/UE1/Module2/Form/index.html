@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <title>Formulaire</title>
+</head>
+<body>
+    <div class="container">
+        <form action="index.html" methode="POST">
+            <fieldset class="information-box">
+                <legend>
+                    <h1>Informations sur le site</h1>
+                </legend>
+                <div class="information">
+                    <div class="website-name">
+                        <label for="website-name">Nom du site :</label>
+                        <input type="text" name="website-name">
+                    </div><div class="website-url">
+                        <label for="website-url">URL du site :</label>
+                        <input type="text" name="website-url" placeholder="https://">
+                    </div>
+            </div>
+            </fieldset>
+            <fieldset class="accessibility-box">
+                <legend>
+                    <h1>Evaluation de l'accessibilité</h1>
+                </legend>
+                <div class="note">
+                        <label for="note">Niveau d'accessibilité : </label>
+                        <select name="note">
+                            <option value="déplorable">Déplorable</option>
+                            <option value="mauvais">mauvais</option>
+                            <option value="moyen">moyen</option>
+                            <option value="bon">bon</option>
+                            <option value="excellent">excellent</option>
+                        </select>
+                    </div>
+                <div class="navigation">
+                        <label for="navigation">Le site est-il facilement naviguable au clavier ?</label>
+                        <input type="radio" name="navigation">Oui
+                        <input type="radio" name="navigation">Non
+                    </div>
+                <div class="alt">
+                        <label for="alt">Le site fournit-il des textes alternatifs pour les images ?</label>
+                        <input type="radio" name="alt">Oui
+                        <input type="radio" name="alt">Non
+                    </div>
+            </fieldset>
+            <fieldset class="function-box">
+                <legend><h1>Fonctionnalité du site</h1></legend>
+                <div>
+                    <label for="youtube">Le site possede-t-il un lecteur youtube ?</label>
+                    <input type="radio" name="youtube">Oui
+                    <input type="radio" name="youtube">Non
+                </div>
+                <div>
+                    <label for="carto">Le site possède-t-il un système de cartographie ?</label>
+                    <input type="radio" name="carto">Oui
+                    <input type="radio" name="carto">Non
+                </div>
+                <div class="cartography">
+                    <label for="cartographie">Si oui, lequel ?</label>
+                    <input type="checkbox" name="cartographie[StreetMap]">Google mapSystemType
+                    <input type="checkbox" name="cartographie[SystemType]">OpenStreetMap
+                    <label for="cartographie[other]">Autre : </label>
+                    <input type="text" name="cartographie[other]">
+                </div>
+            </fieldset>
+            <fieldset class="technology">
+                <legend><h1>Technologie du site</h1></legend>
+                <label for="technologie">Quelle est la technologie du site</label>
+                <input type="checkbox" name="technologie[HTML/CSS]">HTML/CSS
+                <input type="checkbox" name="technologie[JavaScript]">JavaScript
+                <input type="checkbox" name="technologie[PHP]">PHP
+                <input type="checkbox" name="technologie[WordPress]">WordPress
+                <input type="checkbox" name="technologie[autre]">autre
+            </fieldset>
+            <label for="pages">Combien de pages possede le site ?</label>
+             0 <input type="range" name="pages" min="0" max="100"> 100
+             <div>
+                <label for="message">Commentaires supplementaires : </label>
+                <textarea name="message" placeholder="Détails supplémentaires sur l'accessibilité du site ..."></textarea>
+            </div>
+            <div>
+                <button type="reset">Reinitialiser le formulaire</button>
+                <button type="submit">Envoyer le formulaire</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

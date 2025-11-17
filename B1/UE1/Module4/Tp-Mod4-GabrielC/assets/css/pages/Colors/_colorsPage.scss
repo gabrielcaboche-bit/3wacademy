@@ -1,0 +1,60 @@
+@include responsive(tablet){
+    .colorBlocks{
+        flex-direction: row!important;
+        justify-content: space-between!important;
+        flex-wrap: wrap;
+        .colorBlock{
+            width: 48%!important;
+        }
+    }
+    
+}
+@include responsive(laptop){
+    .colorBlocks{
+        flex-direction: row!important;
+        flex-wrap: nowrap;
+        gap: 20px;
+        .colorBlock{
+            height: 25vw!important;
+        }
+    }
+}
+.colorBlocks{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-bottom: 30px;
+    .colorBlock{
+        width: 100%;
+        height: 50vw;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        border-radius: 20px;
+        background: $h-f-bg-color;
+        border: $border;
+        overflow: hidden;
+        .color{
+            height: 55%;
+            width: 100%;
+        }
+        .colorContent{
+            height: fit-content;
+            padding: 10px;
+            color: $title-color;
+            h3{
+                display: block;
+            }
+        }
+        .Lime{
+            background: lime;
+        }
+        .Vert{
+            background: green;
+        }
+        .AvoGre{
+            background: #568203;
+        }
+    }
+}

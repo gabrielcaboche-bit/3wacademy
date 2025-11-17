@@ -1,0 +1,166 @@
+.contact {
+    font-family: sans-serif;
+    background-color: $color-bg;
+    color: $color-text;
+    width: 90%;
+    margin: 0 auto;
+
+    label {
+        color: $color-subtitle;
+    }
+    h1 {
+        color: $color-title;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    form {
+        width: 400px;
+        background: $color-secondary-bg;
+        margin: 40px auto;
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        box-sizing: border-box;
+    }
+
+    iframe {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    .envoyer {
+        background-color: $color-accent-dark;
+        color: $color-text;
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        color: $color-subtitle;
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.4rem;
+        }
+
+        form {
+            width: 95%;
+            padding: 15px;
+        }
+
+        input,
+        textarea {
+            font-size: 0.85rem;
+        }
+
+        .envoyer {
+            font-size: 0.9rem;
+            padding: 8px;
+        }
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        body {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        form {
+            width: 80%;
+            margin: 30px auto;
+            padding: 25px;
+        }
+
+        label {
+            font-size: 1rem;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            font-size: 1rem;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .envoyer {
+            width: 100%;
+            font-size: 1rem;
+            padding: 12px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1rem;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        body {
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        form {
+            width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+        }
+
+        label {
+            font-size: 1.1rem;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            font-size: 1rem;
+            padding: 12px;
+            margin-bottom: 18px;
+        }
+
+        .envoyer {
+            width: 100%;
+            font-size: 1.1rem;
+            padding: 12px;
+        }
+
+        iframe {
+            width: 600px;
+            margin: 30px auto;
+            display: block;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1rem;
+        }
+    }
+}

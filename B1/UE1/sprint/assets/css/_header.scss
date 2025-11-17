@@ -1,0 +1,328 @@
+/* === VARIABLES DE COULEUR === */
+$color-secondary-bg: #a0522d;
+$border-radius: 12px;
+
+/* === HEADER === */
+header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: $color-secondary-bg;
+    border-bottom: 1px solid white;
+
+    .container {
+        width: 98%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            width: 100px;
+            height: auto;
+        }
+
+        .right-side {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            /* Bouton compte */
+            .accountButton {
+                cursor: pointer;
+                font-size: 2rem;
+                color: white;
+                transition: opacity 0.3s ease, transform 0.3s ease;
+                @include responsive(laptop){
+                    opacity: 0;
+                }            
+            }
+
+            /* Bouton panier */
+            .cartButton {
+                cursor: pointer;
+                font-size: 2rem;
+                color: white;
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+
+            /* Icône du menu */
+            .menu-icon {
+                cursor: pointer;
+                font-size: 2rem;
+                color: white;
+                margin-right: 20px;
+                transition: transform 0.3s ease;
+                z-index: 1000;
+
+                @include responsive(laptop) {
+                    display: none;
+                }
+
+                .fa-xmark {
+                    display: none;
+                }
+            }
+
+            /* Checkbox du menu */
+            .nav-toggle {
+                display: none;
+
+                &:checked~.menu-icon .fa-bars {
+                    display: none;
+                }
+
+                &:checked~.menu-icon .fa-xmark {
+                    display: inline;
+                }
+
+                &:checked~.accountButton {
+                    opacity: 0;
+                    pointer-events: none;
+                    transform: scale(0.8);
+                }
+
+                &:checked~.main-nav {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateX(0);
+                    z-index: 999;
+                    transition: transform 0.5s ease-in-out, opacity 0.3s ease, visibility 0s ease-out;
+
+                    @include responsive(tablet) {
+                        transform: translateY(0);
+                    }
+
+                    .profile-section {
+                        opacity: 1;
+                        transform: translateY(0);
+                        transition-delay: 0.4s;
+                    }
+                }
+            }
+
+            /* Menu principal */
+            .main-nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 50%;
+                height: 100vh;
+                border: 2px solid white;
+                padding: 2rem;
+                background-color: $color-secondary-bg;
+                text-align: center;
+                gap: 2rem;
+                visibility: hidden;
+                opacity: 0;
+                transform: translateX(100%);
+                transition: transform 0.5s ease-in-out, opacity 0.1s ease-in-out, visibility 0s ease-in 0.3s;
+                font-family: "Delius Swash Caps", cursive;
+
+                @include responsive(tablet) {
+                    transform: translateY(-200%);
+                    width: auto;
+                    height: auto;
+                    left: 0;
+                }
+
+                @include responsive(laptop) {
+                    position: static;
+                    width: unset;
+                    border: none;
+                    display: flex !important;
+                    flex-direction: row;
+                    background: none;
+                    gap: 2rem;
+                    padding: 0;
+                    height: auto;
+                    align-items: center;
+                    visibility: visible;
+                    opacity: 1;
+                    transform: none;
+                }
+
+                .profile-section {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0.5rem;
+                    opacity: 0;
+                    transform: translateY(-10px);
+                    transition: opacity 0.3s ease, transform 0.3s ease;
+
+                    @include responsive(laptop){
+                        opacity: 1;
+                        flex-direction: row;
+                        transform: translateY(0);
+                    }
+
+                    img {
+                        width: 80px;
+                        height: 80px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+                        @include responsive(laptop){
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+
+                    .username {
+                        color: $color-text;
+                        font-weight: bold;
+                        font-size: 1.1rem;
+                        @include responsive(laptop){
+                           width: max-content;
+                        }
+                    }
+
+                    .profile-link {
+                        background: $color-text;
+                        color: $color-secondary-bg;
+                        padding: 0.5rem 1rem;
+                        border-radius: 20px;
+                        text-decoration: none;
+                        font-weight: 500;
+                        transition: background 0.3s ease, transform 0.2s ease;
+
+                        @include responsive(laptop){
+                           width: max-content;
+                        }
+
+                        &:hover {
+                            background: lighten($color-text, 10%);
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+
+                a {
+                    color: $color-text;
+                    text-decoration: none;
+                    font-size: 1.25rem;
+                    transition: opacity 0.2s;
+
+                    &:hover {
+                        opacity: 0.7;
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* === FOOTER === */
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    height: 70vh;
+    background: $color-secondary-bg;
+    color: $color-text;
+
+    @include responsive(tablet){
+        height: auto;
+    }
+    @include responsive(laptop){
+        height: auto;
+    }
+
+    .titleFooter {
+        display: flex;
+        align-items: center;
+        img {
+            width: 100px;
+            height: auto;
+        }
+    }
+
+    .containerMapText {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        height: 100%;
+
+        .containerText {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 70%;
+            padding: 20px;
+            background: $color-light-bg;
+            color: $color-bg;
+
+            @include responsive(tablet) {
+                flex-direction: row;
+                flex-wrap: wrap;
+                .divider2 {
+                    border: 0px;
+                }
+            }
+
+            @include responsive(laptop) {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                height: fit-content;
+            }
+
+            ul {
+                padding-inline-start: 15px;
+                li {
+                    margin-bottom: 10px;
+                    a {
+                        color: $color-bg;
+                    }
+                }
+            }
+
+            .socials {
+                strong {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                a {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+            }
+
+            form {
+                margin-top: 20px;
+                strong {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                input[type="text"] {
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    @include responsive(laptop) {
+                        width: auto;
+                    }
+                }
+                input[type="submit"] {
+                    white-space: pre-line;
+                    text-align: left;
+                }
+            }
+        }
+
+        .containerMap{
+            @include responsive(laptop){
+                height: 250px;
+                width: 50%;
+            }
+            iframe {
+                width: 100%;
+                margin-bottom: 20px;
+                display: inline-block;
+            }
+        }
+    }
+}

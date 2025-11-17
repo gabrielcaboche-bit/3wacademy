@@ -1,0 +1,50 @@
+body{
+    width:80%;
+    margin:0 auto;
+}
+h1{
+    text-align:center;
+}
+caption{
+    font-weight:bold;
+    margin:10px 0;
+}
+td, th{
+    padding:20px 0;
+}
+
+thead{
+    background:grey;
+    color:white;
+}
+.label {
+    width:40%;
+    display:inline-block;
+    height:1fr;
+}
+tbody tr:nth-child(odd){
+    background:#BFFEE9;
+}
+
+tfoot td{
+    border:1px solid black;
+    text-align:center;
+}
+fieldset > div{
+    padding: 20px;
+}
+button:first-of-type{
+    background-color: #BFFEE9;
+    border:0;
+}
+ 
+button:last-of-type{
+    background-color: red;
+    border:0;
+}
+.buttons{
+    text-align:center;
+}
+textarea{
+    width:100%;
+}

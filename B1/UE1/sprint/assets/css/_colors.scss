@@ -1,0 +1,23 @@
+// Couleurs CSS (pour le navigateur)
+:root {
+  --color-bg: #1A1A1A;
+  --color-text: #F0F0F0;
+  --color-dark-text: #333333;
+  --color-title: #703816;
+  --color-subtitle: #B58A40;
+  --color-secondary-bg: #333333;
+  --color-light-bg: #fff8f0;
+  --color-accent-dark: #703816;
+  --color-accent-light: #B58A40;
+}
+
+// Couleurs SASS (pour les fonctions comme lighten())
+$color-bg: #1A1A1A;
+$color-text: #F0F0F0;
+$color-dark-text: #333333;
+$color-title: #703816;
+$color-subtitle: #B58A40;
+$color-secondary-bg: #333333;
+$color-light-bg: #fff8f0;
+$color-accent-dark: #703816;
+$color-accent-light: #B58A40;

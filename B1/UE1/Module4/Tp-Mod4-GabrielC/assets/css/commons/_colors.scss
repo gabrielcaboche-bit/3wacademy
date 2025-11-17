@@ -1,0 +1,21 @@
+:root{
+    --h-f-bg-color:#fff;
+    --main-bg-color:#cfcfcf;
+    --txt-color:#3e6877;
+    --title-color: #3e6877;
+    --border: none;
+}
+#theme-checkbox{
+    &:checked ~ *{
+        --h-f-bg-color:#333333;
+        --main-bg-color:#333333;
+        --txt-color:#fff;
+        --border: 2px solid white;
+    }
+}
+
+$h-f-bg-color: var(--h-f-bg-color);
+$main-bg-color: var(--main-bg-color);
+$txt-color: var(--txt-color);
+$title-color: var(--title-color);
+$border: var(--border);

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Les formulaires</title>
+</head>
+<body>
+  <form action="" method="POST">
+    <fieldset>
+        <legend>Informations sur le site</legend>
+        <div>
+          <label for="site-name">Nom du site :</label>
+          <input type="text" id="site-name" name="siteName" required>
+        </div>
+        
+        <div>
+          <label for="site-url">URL du site :</label>
+          <input type="url" id="site-url" name="siteUrl" placeholder="https://" required>
+        </div>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Évaluation de l'accessibilité</legend>
+        <div>
+          <label for="accessibility-rating">Niveau d'accessibilité :</label>
+          <select id="accessibility-rating" name="accessibilityRating">
+              <option value="excellent">Excellent</option>
+              <option value="good">Bon</option>
+              <option value="average">Moyen</option>
+              <option value="poor">Mauvais</option>
+              <option value="na">Non applicable / Non évalué</option>
+          </select>
+        </div>
+        
+        <div>
+          <label for="keyboardNav">Le site est-il facilement navigable au clavier ?</label>
+          <input type="radio" name="keyboardNav" value="yes" required> Oui
+          <input type="radio" name="keyboardNav" value="no"> Non
+        </div>
+        
+        <div>
+          <label for="altText">Le site fournit-il des textes alternatifs pour les images ?</label>
+          <input type="radio" name="altText" value="yes" required> Oui
+          <input type="radio" name="altText" value="no"> Non
+        </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Fonctionnalités du site</legend>
+      <div>
+        <label for="youtubePlayer">Le site possède-t-il un lecteur YouTube ?</label>
+        <input type="radio" name="youtubePlayer" value="yes" required> Oui
+        <input type="radio" name="youtubePlayer" value="no"> Non
+      </div>
+
+      <div>
+        <label for="mappingSystem">Le site possède-t-il un système de cartographie ?</label>
+        <input type="radio" name="mappingSystem" value="yes" required> Oui
+        <input type="radio" name="mappingSystem" value="no"> Non
+      </div>
+
+      <div>
+        <label for="mapSystemType">Si oui, lequel ?</label>
+        <input type="checkbox" name="mapSystemType" value="googleMaps"> Google mapSystemType
+        <input type="checkbox" name="mapSystemType" value="openStreetMap"> OpenStreetMap
+        Autre : <input type="text" name="mapSystemType">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Technologies du site</legend>
+      <div>
+        <label for="siteTech">Quelle est la technologie du site ?</label>
+        <input type="checkbox" name="siteTech" value="htmlCss"> HTML/CSS
+        <input type="checkbox" name="siteTech" value="javascript"> JavaScript
+        <input type="checkbox" name="siteTech" value="php"> PHP
+        <input type="checkbox" name="siteTech" value="wordpress"> WordPress
+        <input type="checkbox" name="siteTech" value="other"> Autre
+      </div>
+    </fieldset>
+
+    <div>
+      <label for="sitePages">Combien de pages possède le site ?</label>
+      1 <input type="range" id="sitePages" name="sitePages" min="1" max="1000" value="50"> 1000
+    </div>
+    
+    <div>
+      <label for="comments">Commentaires supplémentaires :</label>
+      <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Détails supplémentaires sur l'accessibilité du site..."></textarea>
+    </div>
+    
+    <div>
+      <button type="submit">Soumettre l'évaluation</button>
+      <button type="reset">Réinitialiser le formulaire</button>
+    </div>
+  </form>
+</body>
+</html>

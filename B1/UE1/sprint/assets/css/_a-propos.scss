@@ -1,0 +1,126 @@
+.a-propos {
+    background-image: url(../media/images/photo-boulangerie.jpg) ;
+    background-position: center;
+    background-size: cover;
+    font-family: sans-serif;
+    .wrapper{
+        background: rgba(0,0,0,0.8);
+        header{
+            margin: 0;
+        }
+    }
+    h1 {
+        text-align: center;
+        color: $color-title;
+        background: $color-secondary-bg;
+        text-shadow: 0px 0px 6px white;
+        padding: 20px 0;
+    }
+    section {
+        padding: 40px;
+    }
+    h2 {
+        padding: 10px;
+        color: $color-subtitle;
+    }
+    p,
+    li,
+    .ll {
+        color: $color-text;
+    }
+
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+        }
+
+        p,
+        li,
+        .il {
+            font-size: 0.9rem;
+        }
+    }
+
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        body {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+        section {
+            padding: 25px;
+        }
+
+        p,
+        li,
+        .il {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .il {
+            text-align: center;
+            margin-top: 15px;
+        }
+    }
+
+
+
+
+
+    @media (min-width: 1025px) {
+        body {
+            padding: 40px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            text-align: left;
+        }
+
+        section {
+            padding: 40px;
+        }
+
+        p,
+        li,
+        .il {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .il {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        article {
+            padding: 20px;
+            border-radius: 8px;
+        }
+    }
+}

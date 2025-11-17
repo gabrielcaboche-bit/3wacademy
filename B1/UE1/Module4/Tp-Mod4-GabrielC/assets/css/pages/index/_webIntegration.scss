@@ -1,0 +1,42 @@
+.videosContainer{
+    text-align: center;
+    a{
+        width: 100%;
+    }
+    .videos{
+        margin: 0;
+        margin-bottom: 40px;
+        width: 100%;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        
+        gap: 20px;
+        .videoCard{
+            width: 100%;
+            display: flex;
+            border: $border;
+            border-radius: 20px;
+            background: $h-f-bg-color;
+            overflow: hidden;
+            flex-direction: column;
+            .video{
+                height: 50vw;
+            }
+            .mp4{
+                height: max-content!important;
+            }
+            .videoDesc{
+                text-align: initial;
+                margin: 0;
+                height: fit-content;
+                padding: 20px;
+                h3{
+                    color: $title-color;
+                }
+                p{
+                    color: $txt-color;
+                }
+            }
+        }
+    }
+}

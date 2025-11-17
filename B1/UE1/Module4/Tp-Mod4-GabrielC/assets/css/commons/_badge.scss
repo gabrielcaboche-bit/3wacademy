@@ -1,0 +1,32 @@
+$css-color: #248282;
+$html-color: #c26c4f;
+$UI-color: #9c2abf;
+$html-bg: color.adjust($html-color, $alpha: -0.5);
+$css-bg: color.adjust($css-color, $alpha: -0.5);
+$UI-bg: color.adjust($UI-color, $alpha: -0.5);
+
+.badge{
+    margin: 0;
+    margin-right: 20px;
+    padding: 3px;
+    display: inline-block;
+}
+.css{
+    color: $css-color;
+    background: $css-bg;
+}
+.html{
+    color: $html-color;
+    background: $html-bg;
+}
+.UI{
+    color: $UI-color;
+    background: $UI-bg;
+}
+.date{
+    margin: 0;
+    padding: 3px;
+    display: inline-block;
+    color: white;
+    background: grey;
+}

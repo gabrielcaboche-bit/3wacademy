@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Norman Rockwell</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" >
+</head>
+
+<body>
+<header class="site-header">
+    <section class="header-container">
+      <!-- Logo + slogan -->
+      <div class="site-title">
+        <a href="index.html"><i class="fa-brands fa-neos logo"></i></a>
+        <span class="tagline">L’art au service de l’humanité</span>
+      </div>
+
+      <!-- Checkbox hack du menu -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+
+      <!-- Icône menu -->
+      <label for="nav-toggle" class="menu-icon">
+        <i class="fa-solid fa-bars bars"></i>
+        <i class="fa-solid fa-xmark mark"></i>
+      </label>
+
+      <!-- Navigation -->
+      <nav class="main-nav" aria-label="main">
+        <a href="index.html">Home</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+
+        <!-- Bouton thème -->
+        <div class="theme-wrapper">
+          <input type="checkbox" id="theme-checkbox">
+          <label for="theme-checkbox" class="theme-toggle">
+            <i class="fa-regular fa-sun"></i>
+            <i class="fa-regular fa-moon"></i>
+          </label>
+        </div>
+      </nav>
+    </section>
+  </header>
+    <main class="home">
+        <div class="title-box">
+            <h1>Norman Rockwell</h1>
+            <q>Illustrer l'humanité pour dénoncer l'injustice</q>
+        </div>
+        <div class="container">
+            <div class="img">
+                <!--Décemment pas facile de trouver pusieurs même images 
+                avec des résolutions différentes-->
+                <img
+                  srcset="assets/img/index/self-portraitx700.jpg, assets/img/index/self-portraitx1253.webp 1.5x"
+                  src="assets/img/index/self-portraitx700.jpg"
+                  alt="Triple Auto-portrait de Norman Rockwell">
+            </div>
+            <div class="paragraphe">
+                <p>Norman Rockwell, figure emblématique de l’art américain du XXe siècle, est né le 3 février 1894 à New York et décédé en 1978 à Stockbridge, Massachusetts. Il est surtout connu pour ses illustrations réalistes de la vie quotidienne aux États-Unis, en particulier à travers les couvertures du Saturday Evening Post, qu’il a réalisées pendant près de 47 ans. Son style, profondément ancré dans le réalisme américain, se distingue par une grande attention portée aux détails, aux émotions, aux postures et à l’atmosphère des scènes représentées. Rockwell observe avec précision le quotidien des Américains, qu’il restitue sans artifice, mais toujours avec humanité. À travers ses œuvres, il ne cherche pas seulement à montrer les difficultés sociales – comme celles des ouvriers ou des minorités – mais aussi à transmettre un message d’espoir et de changement. Artiste engagé, il s’inspire notamment du discours des "Four Freedoms" de Roosevelt pendant la Seconde Guerre mondiale, donnant naissance à une série de tableaux devenus célèbres. Aujourd’hui, un musée lui est consacré à Stockbridge, où une grande partie de son travail est conservée, témoignant de son impact durable sur l’histoire de l’art et de la société américaine.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="columns">
+            <div class="logo-name">
+                <div class="name">
+                    <i class="fa-brands fa-neos logo"></i>
+                    <h3>Norman rockwell</h3>
+                </div>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <h4>Navigation</h4>
+                <a>HomePage</a>
+                <a>Gallerie</a>
+                <a>Contact</a>
+                <a>About Me</a>
+            </div>
+            <div class="coordonnees">
+                <h4>Coordonnées</h4>
+                <p>214 boulevard raspail</p>
+                <p>75014, Paris 14ième arrondissement</p>
+                <p>8h/17h du lundi au vendredi
+                    <br>et 10h/17h le samedi</p>
+            </div>
+            <div class="newsletter">
+                <h4>Newsletter</h4>
+                <form name="newsletter">
+                    <input type="text" id="mail" placeholder="e-mail@gmail.com" />
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+        </div>
+
+        <p>© Tous droits réservés</p>
+    </footer>
+</body>
+
+</html>

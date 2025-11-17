@@ -1,0 +1,156 @@
+/* SECTION GÉNÉRALE */
+.gallery-section {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.gallery-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  background-color: #d1d5db;
+  color: #111;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
+
+/* GRILLE GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+/* MASQUER LES INPUTS ET LES TEXTES PAR DÉFAUT */
+input[type="radio"],
+.texte,
+.blank {
+  display: none;
+}
+
+/* IMAGE LABEL */
+label.image-item {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+label.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+}
+
+/* HOVER & FOCUS */
+label.image-item:hover,
+input[type="radio"]:checked + .blank + label.image-item,
+input[type="radio"]:checked + label.image-item {
+  z-index: 3;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* AFFICHAGE DU TEXTE LIÉ À L'IMAGE SÉLECTIONNÉE */
+input[type="radio"]:checked + .blank + label + .texte,
+input[type="radio"]:checked + label + .texte {
+  display: block;
+  margin-left: -5rem;
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+/* STYLES DU TEXTE */
+.texte {
+  color: black;
+  border-radius: 20px;
+  background: lightgrey;
+  padding-left: 5rem;
+}
+
+.texte h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.texte .artist {
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.texte .desc {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.texte a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.texte a:hover {
+  background-color: #333;
+}
+
+/* RESPONSIVE AFFICHAGE DES .blank */
+/* Desktop : 4 colonnes */
+@media (min-width: 1024px) {
+  input.end-4col:checked + .blank {
+    display: block;
+  }
+}
+
+/* Tablet : 3 colonnes */
+@media (min-width: 701px) and (max-width: 1023px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  input.end-3col:checked + .blank {
+    display: block;
+  }
+}
+
+/* Mobile : 2 colonnes */
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-title {
+    font-size: 1.6rem;
+  }
+
+  .texte h3 {
+    font-size: 1rem;
+  }
+
+  .texte .desc {
+    font-size: 0.8rem;
+  }
+
+  input.end-2col:checked + .blank {
+    display: block;
+  }
+}

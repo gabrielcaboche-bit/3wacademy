@@ -1,0 +1,41 @@
+@use 'sass:color';
+
+@mixin responsive($breakpoint){
+    @if $breakpoint == tablet {
+        @media (min-width: 430px) and (max-width: 1023px){
+            @content;
+        }
+    }
+    @else if $breakpoint == laptop {
+        @media (min-width: 1024px){
+            @content;
+        }
+    }
+}
+
+@import 'commons/defaultStyleSheet';
+@import 'commons/colors';
+@import 'commons/container';
+@import 'commons/header';
+@import 'commons/footer';
+@import 'commons/title';
+@import 'commons/button';
+@import 'commons/infoBox';
+@import 'commons/infoText';
+@import 'commons/badge';
+
+@import 'pages/Colors/colorsPage';
+@import 'pages/index/index';
+@import 'pages/ColorDetail/colorDetailsPage';
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.bg-body{
+    background: var(--main-bg-color);
+    color: var(--txt-color);
+}

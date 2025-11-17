@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Galerie Norman Rockwell</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header class="site-header">
+    <section class="header-container">
+      <!-- Logo + slogan -->
+      <div class="site-title">
+        <a href="index.html"><i class="fa-brands fa-neos logo"></i></a>
+        <span class="tagline">L’art au service de l’humanité</span>
+      </div>
+
+      <!-- Checkbox hack du menu -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+      <!-- Icône menu -->
+      <label for="nav-toggle" class="menu-icon">
+        <i class="fa-solid fa-bars bars"></i>
+        <i class="fa-solid fa-xmark mark"></i>
+      </label>
+
+      <!-- Navigation -->
+      <nav class="main-nav" aria-label="main">
+        <a href="index.html">Home</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="contact.html">Contact</a>
+
+        <div class="socials">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+
+        <!-- Bouton thème -->
+        <div class="theme-wrapper">
+          <input type="checkbox" id="theme-checkbox">
+          <label for="theme-checkbox" class="theme-toggle">
+            <i class="fa-regular fa-sun"></i>
+            <i class="fa-regular fa-moon"></i>
+          </label>
+        </div>
+      </nav>
+    </section>
+  </header>
+  <main>
+    <div class="title-box">
+      <h1>Galerie</h1>
+    </div>
+
+    <section class="gallery-section">
+
+      <div class="gallery">
+        
+        <input type="radio" name="gallery" id="img1" />
+        <div class="blank"></div>
+        <label for="img1" class="image-item">
+          <img src="assets/img/details/the-problem-we-all-live-with.jpg" alt="Freedom from Want" />
+        </label>
+        <div class="texte">
+          <h3>Freedom from Want</h3>
+          <p class="artist">Norman Rockwell</p>
+          <p class="desc">Représente une scène de Thanksgiving avec une famille réunie autour d'une dinde, incarnant l'abondance et la gratitude.</p>
+          <a href="details.html">En savoir plus</a>
+        </div>
+        
+        <input type="radio" name="gallery" id="img2" class="end-2col" />
+        <div class="blank"></div>
+        <label for="img2" class="image-item">
+          <img src="assets/img/gallerie/rockwell1.jpg" alt="Freedom from Want" />
+        </label>
+        <div class="texte">
+          <h3>Freedom from Want</h3>
+          <p class="artist">Norman Rockwell</p>
+          <p class="desc">Représente une scène de Thanksgiving avec une famille réunie autour d'une dinde, incarnant l'abondance et la gratitude.</p>
+          <a href="">En savoir plus</a>
+        </div>
+
+        <input type="radio" name="gallery" id="img3"  class="end-3col" />
+        <div class="blank"></div>
+        <label for="img3" class="image-item">
+          <img src="assets/img/gallerie/rockwell2.jpg" alt="Liberty of Speech" />
+        </label>
+        <div class="texte">
+          <h3>Liberty of Speech</h3>
+          <p class="artist">Norman Rockwell</p>
+          <p class="desc">Montre un homme debout dans une assemblée, exprimant librement son opinion, représentant l'une des libertés fondamentales.</p>
+          <a href="">En savoir plus</a>
+        </div>
+
+        <input type="radio" name="gallery" id="img4" class="end-4col end-2col" />
+        <div class="blank"></div>
+        <label for="img4" class="image-item">
+          <img src="assets/img/gallerie/rockwell3.jpg" alt="Girl at Mirror" />
+        </label>
+        <div class="texte">
+          <h3>Girl at Mirror</h3>
+          <p class="artist">Norman Rockwell</p>
+          <p class="desc">Montre une jeune fille se regardant dans un miroir, réfléchissant à son image et à son identité.</p>
+          <a href="">En savoir plus</a>
+        </div>
+
+        <input type="radio" name="gallery" id="img5" />
+        <div class="blank"></div>
+        <label for="img5" class="image-item">
+          <img src="assets/img/gallerie/rockwell4.jpg" alt="Home for Christmas" />
+        </label>
+        <div class="texte">
+          <h3>Home for Christmas</h3>
+          <p class="artist">Norman Rockwell</p>
+          <p class="desc">Représente une scène hivernale de la rue principale de Stockbridge, Massachusetts, capturant l'esprit de Noël.</p>
+          <a href="">En savoir plus</a>
+        </div>
+
+        <input type="radio" name="gallery" id="img6" class="end-3col end-2col" />
+        <div class="blank"></div>
+        <label for="img6" class="image-item">
+          <img src="assets/img/gallerie/rockwell5.jpg" alt="Rosie the Riveter" />
+        </label>
+        <div class="texte">
+          <h3>Rosie the Riveter</h3>
+          <p class="artist">Norman Rockwell</p>
+          <p class="desc">Illustre une femme robuste en train de riveter un avion, symbolisant la contribution des femmes à l'effort de guerre.</p>
+          <a href="">En savoir plus</a>
+        </div>
+
+        <input type="radio" name="gallery" id="img7" />
+        <div class="blank"></div>
+        <label for="img7" class="image-item">
+          <img src="assets/img/gallerie/rockwell6.jpg" alt="Saying Grace" />
+        </label>
+        <div class="texte">
+          <h3>Saying Grace</h3>
+          <p class="artist">Norman Rockwell</p>
+          <p class="desc">Illustre une famille priant avant le repas dans un restaurant bondé, mettant en avant la foi et la tradition.</p>
+          <a href="">En savoir plus</a>
+        </div>
+
+        <input type="radio" name="gallery" id="img8" class="end-2col end-4col" />
+        <div class="blank"></div>
+        <label for="img8" class="image-item">
+          <img src="assets/img/gallerie/rockwell7.jpg" alt="Golden Rule" />
+        </label>
+        <div class="texte">
+          <h3>Golden Rule</h3>
+          <p class="artist">Norman Rockwell</p>
+          <p class="desc">Représente des personnes de différentes cultures et religions, illustrant le principe de traiter les autres comme on voudrait être traité.</p>
+          <a href="">En savoir plus</a>
+        </div>
+
+        <input type="radio" name="gallery" id="img9" class="end-3col"/>
+        <div class="blank"></div>
+        <label for="img9" class="image-item">
+          <img src="assets/img/gallerie/rockwell8.jpg" alt="The Runaway" />
+        </label>
+        <div class="texte">
+          <h3>The Runaway</h3>
+          <p class="artist">Norman Rockwell</p>
+          <p class="desc">Montre un jeune garçon assis dans un diner, discutant avec un policier, symbolisant l'innocence et la bonté humaine.</p>
+          <a href="">En savoir plus</a>
+        </div>
+
+        <input type="radio" name="gallery" id="img10" class="end-2col"/>
+        <div class="blank"></div>
+        <label for="img10" class="image-item">
+          <img src="assets/img/gallerie/rockwell9.jpg" alt="Triple Self-Portrait" />
+        </label>
+        <div class="texte">
+          <h3>Triple Self-Portrait</h3>
+          <p class="artist">Norman Rockwell</p>
+          <p class="desc">Rockwell se peint en train de se peindre, offrant une réflexion sur l'art et l'identité.</p>
+          <a href="">En savoir plus</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  <footer>
+        <div class="columns">
+            <div class="logo-name">
+                <div class="name">
+                    <i class="fa-brands fa-neos logo"></i>
+                    <h3>Norman rockwell</h3>
+                </div>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <h4>Navigation</h4>
+                <a>HomePage</a>
+                <a>Gallerie</a>
+                <a>Contact</a>
+                <a>About Me</a>
+            </div>
+            <div class="coordonnees">
+                <h4>Coordonnées</h4>
+                <p>214 boulevard raspail</p>
+                <p>75014, Paris 14ième arrondissement</p>
+                <p>8h/17h du lundi au vendredi
+                    <br>et 10h/17h le samedi</p>
+            </div>
+            <div class="newsletter">
+                <h4>Newsletter</h4>
+                <form name="newsletter">
+                    <input type="text" id="mail" placeholder="e-mail@gmail.com" />
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+        </div>
+
+        <p>© Tous droits réservés</p>
+    </footer>
+</body>
+</html>

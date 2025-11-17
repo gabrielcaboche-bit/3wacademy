@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Les formulaires et tableaux</title>
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+</head>
+<body>
+  <h1>Tableau</h1>
+    <table>
+    <caption>Notions d'accessibilité importantes en intégration web</caption>
+    <thead>
+      <tr>
+        <th scope="col">Notion</th>
+        <th scope="col">À quoi ça sert ?</th>
+        <th scope="col">Balise/Attribut</th>
+        <th scope="col">Exemple</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td colspan="4">Ces pratiques d'accessibilité contribuent à rendre le web plus inclusif.</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <th scope="row">Texte alternatif</th>
+        <td>Fournit une description textuelle des images aux technologies d'assistance.</td>
+        <td>Attribut <code>alt</code> dans <code>&lt;img&gt;</code></td>
+        <td><code>&lt;img src="photo.jpg" alt="Description de l'image"&gt;</code></td>
+      </tr>
+      <tr>
+        <th scope="row">Labels de formulaire</th>
+        <td>Identifie le but des champs de formulaire pour les utilisateurs et les technologies d'assistance.</td>
+        <td>Balises <code>&lt;label&gt;</code></td>
+        <td><code>&lt;label for="nom"&gt;Nom:&lt;/label&gt;&lt;input type="text" id="nom"&gt;</code></td>
+      </tr>
+      <tr>
+        <th scope="row">Structures de page logiques</th>
+        <td>Aide à la navigation et à la compréhension de la structure de la page.</td>
+        <td>Balises de structure (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>)</td>
+        <td><code>&lt;main&gt;&lt;h1&gt;Titre&lt;/h1&gt;&lt;/main&gt;</code></td>
+      </tr>
+      <tr>
+        <th scope="row">Liens accessibles</th>
+        <td>Assure que les liens sont compréhensibles hors contexte.</td>
+        <td>Balise <code>&lt;a&gt;</code></td>
+        <td><code>&lt;a href="page.html"&gt;En savoir plus&lt;/a&gt;</code></td>
+      </tr>
+      <tr>
+        <th scope="row">Utilisation des titres</th>
+        <td>Organise le contenu pour faciliter la lecture et la navigation.</td>
+        <td>Balises <code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code></td>
+        <td><code>&lt;h2&gt;Sous-section&lt;/h2&gt;</code></td>
+      </tr>
+    </tbody>
+  </table>
+  <h1>Formulaire</h1>
+  <form action="" method="POST">
+    <fieldset>
+        <legend>Informations sur le site</legend>
+        <div>
+          <div class="label">
+            <label for="site-name">Nom du site :</label>
+          </div>
+          <input type="text" id="site-name" name="siteName" required>
+        </div>
+        
+        <div>
+          <div class="label">
+            <label for="site-url">URL du site :</label>
+          </div>
+          <input type="url" id="site-url" name="siteUrl" placeholder="https://" required>
+        </div>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Évaluation de l'accessibilité</legend>
+        <div>
+          <div class="label">
+            <label for="accessibility-rating">Niveau d'accessibilité :</label>
+          </div>
+          <select id="accessibility-rating" name="accessibilityRating">
+              <option value="excellent">Excellent</option>
+              <option value="good">Bon</option>
+              <option value="average">Moyen</option>
+              <option value="poor">Mauvais</option>
+              <option value="na">Non applicable / Non évalué</option>
+          </select>
+        </div>
+        
+        <div>
+          <div class="label">
+            <label for="keyboardNav">Le site est-il facilement navigable au clavier ?</label>
+          </div>
+          <input type="radio" name="keyboardNav" value="yes" required> Oui
+          <input type="radio" name="keyboardNav" value="no"> Non
+        </div>
+        
+        <div>
+          <div class="label">
+            <label for="altText">Le site fournit-il des textes alternatifs pour les images ?</label>
+          </div>
+          <input type="radio" name="altText" value="yes" required> Oui
+          <input type="radio" name="altText" value="no"> Non
+        </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Fonctionnalités du site</legend>
+      <div>
+        <div class="label">
+          <label for="youtubePlayer">Le site possède-t-il un lecteur YouTube ?</label>
+        </div>
+        <input type="radio" name="youtubePlayer" value="yes" required> Oui
+        <input type="radio" name="youtubePlayer" value="no"> Non
+      </div>
+
+      <div>
+        <div class="label">
+          <label for="mappingSystem">Le site possède-t-il un système de cartographie ?</label>
+        </div>
+        <input type="radio" name="mappingSystem" value="yes" required> Oui
+        <input type="radio" name="mappingSystem" value="no"> Non
+      </div>
+
+      <div>
+        <div class="label">
+          <label for="mapSystemType">Si oui, lequel ?</label>
+        </div>
+        <input type="checkbox" name="mapSystemType" value="googleMaps"> Google mapSystemType
+        <input type="checkbox" name="mapSystemType" value="openStreetMap"> OpenStreetMap
+        Autre : <input type="text" name="mapSystemType">
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Technologies du site</legend>
+      <div>
+        <div class="label">
+          <label for="siteTech">Quelle est la technologie du site ?</label>
+        </div>
+        <input type="checkbox" name="siteTech" value="htmlCss"> HTML/CSS
+        <input type="checkbox" name="siteTech" value="javascript"> JavaScript
+        <input type="checkbox" name="siteTech" value="php"> PHP
+        <input type="checkbox" name="siteTech" value="wordpress"> WordPress
+        <input type="checkbox" name="siteTech" value="other"> Autre
+      </div>
+    </fieldset>
+    <div class="foot">
+      <div>
+        <div class="label">
+          <label for="sitePages">Combien de pages possède le site ?</label>
+        </div>
+        1 <input type="range" id="sitePages" name="sitePages" min="1" max="1000" value="50"> 1000
+      </div>
+      
+      <div>
+        <div class="label">
+          <label for="comments">Commentaires supplémentaires :</label>
+        </div>
+        <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Détails supplémentaires sur l'accessibilité du site..."></textarea>
+      </div>
+      
+      <div class="buttons">
+        <button type="submit">Soumettre l'évaluation</button>
+        <button type="reset">Réinitialiser le formulaire</button>
+      </div>
+    </div>
+  </form>
+</body>
+</html>

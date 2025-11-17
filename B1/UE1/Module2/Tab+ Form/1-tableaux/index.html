@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>L'accessibilité</title>
+</head>
+<body>
+  <table>
+    <caption>Notions d'accessibilité importantes en intégration web</caption>
+    <thead>
+      <tr>
+        <th scope="col">Notion</th>
+        <th scope="col">À quoi ça sert ?</th>
+        <th scope="col">Balise/Attribut</th>
+        <th scope="col">Exemple</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <td colspan="4">Ces pratiques d'accessibilité contribuent à rendre le web plus inclusif.</td>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <th scope="row">Texte alternatif</th>
+        <td>Fournit une description textuelle des images aux technologies d'assistance.</td>
+        <td>Attribut <code>alt</code> dans <code>&lt;img&gt;</code></td>
+        <td><code>&lt;img src="photo.jpg" alt="Description de l'image"&gt;</code></td>
+      </tr>
+      <tr>
+        <th scope="row">Labels de formulaire</th>
+        <td>Identifie le but des champs de formulaire pour les utilisateurs et les technologies d'assistance.</td>
+        <td>Balises <code>&lt;label&gt;</code></td>
+        <td><code>&lt;label for="nom"&gt;Nom:&lt;/label&gt;&lt;input type="text" id="nom"&gt;</code></td>
+      </tr>
+      <tr>
+        <th scope="row">Structures de page logiques</th>
+        <td>Aide à la navigation et à la compréhension de la structure de la page.</td>
+        <td>Balises de structure (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>)</td>
+        <td><code>&lt;main&gt;&lt;h1&gt;Titre&lt;/h1&gt;&lt;/main&gt;</code></td>
+      </tr>
+      <tr>
+        <th scope="row">Liens accessibles</th>
+        <td>Assure que les liens sont compréhensibles hors contexte.</td>
+        <td>Balise <code>&lt;a&gt;</code></td>
+        <td><code>&lt;a href="page.html"&gt;En savoir plus&lt;/a&gt;</code></td>
+      </tr>
+      <tr>
+        <th scope="row">Utilisation des titres</th>
+        <td>Organise le contenu pour faciliter la lecture et la navigation.</td>
+        <td>Balises <code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code></td>
+        <td><code>&lt;h2&gt;Sous-section&lt;/h2&gt;</code></td>
+      </tr>
+    </tbody>
+  </table>    
+</body>
+</html>

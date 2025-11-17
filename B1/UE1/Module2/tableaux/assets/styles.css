@@ -1,0 +1,17 @@
+.container{
+    width:80%;
+    margin:0 auto;
+}
+td{
+    border:2px solid black;
+}
+thead{
+    background:lightgrey;
+}
+tfoot{
+    text-align:center;
+}
+
+tbody tr td:first-child{
+    font-weight:bold;
+}

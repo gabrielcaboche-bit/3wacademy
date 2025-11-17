@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Norman Rockwell</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <body>
+        <header class="site-header">
+            <section class="header-container">
+                <!-- Logo + slogan -->
+                <div class="site-title">
+                    <a href="index.html"><i class="fa-brands fa-neos logo"></i></a>
+                    <span class="tagline">L’art au service de l’humanité</span>
+                </div>
+
+                <!-- Checkbox hack du menu -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+
+                <!-- Icône menu -->
+                <label for="nav-toggle" class="menu-icon">
+                    <i class="fa-solid fa-bars bars"></i>
+                    <i class="fa-solid fa-xmark mark"></i>
+                  </label>
+
+                <!-- Navigation -->
+                <nav class="main-nav" aria-label="main">
+                    <a href="index.html">Home</a>
+                    <a href="galerie.html">Galerie</a>
+                    <a href="contact.html">Contact</a>
+
+                    <div class="socials">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+
+                    <!-- Bouton thème -->
+                    <div class="theme-wrapper">
+                        <input type="checkbox" id="theme-checkbox">
+                        <label for="theme-checkbox" class="theme-toggle">
+            <i class="fa-regular fa-sun"></i>
+            <i class="fa-regular fa-moon"></i>
+          </label>
+                    </div>
+                </nav>
+            </section>
+        </header>
+        <main class="contact">
+            <div class="title-box">
+                <h1>Contact</h1>
+            </div>
+            <section class="contact-section container">
+                <div class="img-txt">
+                    <img src="assets/img/contact/citation-rockwell.png" alt="portrait Norman Rockwell">
+                    <p>
+                        Cette citation de Norman Rockwell est percutante car elle donne un sens aux choses les plus basiques de la vie : rien n'est réellement ennuyeux ou ordinaire. Il nous explique que c'est le regard que l'on porte sur la vie qui change la vision que l'on
+                        a du monde. Cela est influencé par notre curiosité et et manière d'influencer ce qui nous entoure ainsi que chaque évènement de la vie.
+                    </p>
+                </div>
+                <form action="contact.html" method="POST">
+                    <div>
+                        <label for="name">Prénom* :</label>
+                        <input type="text" name="name" id="name" placeholder="Luc" required>
+                    </div>
+                    <div>
+                        <label for="surname">Nom de famille* :</label>
+                        <input type="text" name="surname" id="surname" placeholder="Courbet" required>
+                    </div>
+                    <div>
+                        <label for="email">Email* :</label>
+                        <input type="email" name="email" id="email" placeholder="exemple@gmail.com" required>
+                    </div>
+                    <div>
+                        <label for="subject">Sujet* :</label>
+                        <input type="text" name="subject" id="subject" placeholder="Exemple: Prochaines rencontres" required>
+                    </div>
+                    <label for="message">Message* :</label>
+                    <textarea id="message" name="message" rows="10" cols="50" placeholder="Écrivez votre message ici" required></textarea>
+                    <div>
+                        <button type="submit">Envoyer</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+        <div class="columns">
+            <div class="logo-name">
+                <div class="name">
+                    <i class="fa-brands fa-neos logo"></i>
+                    <h3>Norman rockwell</h3>
+                </div>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <h4>Navigation</h4>
+                <a>HomePage</a>
+                <a>Gallerie</a>
+                <a>Contact</a>
+                <a>About Me</a>
+            </div>
+            <div class="coordonnees">
+                <h4>Coordonnées</h4>
+                <p>214 boulevard raspail</p>
+                <p>75014, Paris 14ième arrondissement</p>
+                <p>8h/17h du lundi au vendredi
+                    <br>et 10h/17h le samedi</p>
+            </div>
+            <div class="newsletter">
+                <h4>Newsletter</h4>
+                <form name="newsletter">
+                    <input type="text" id="mail" placeholder="e-mail@gmail.com" />
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+        </div>
+
+        <p>© Tous droits réservés</p>
+    </footer>
+    </body>
+</html>

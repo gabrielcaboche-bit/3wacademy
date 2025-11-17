@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+table {
+  margin: 2rem auto;
+}
+
+table caption {
+  margin-bottom: 2rem;
+}
+
+table thead {
+  background-color: gray;
+  color: white;
+}
+
+table tfoot {
+  text-align: center;
+}
+
+table th,
+table td {
+  border: 1px solid black;
+}
+

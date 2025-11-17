@@ -1,0 +1,114 @@
+/*section haut*/
+
+.accueil {
+  background: $color-bg;
+
+  .acceuil-h {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: #fff5e6;
+  }
+
+  .acceuil-text-h {
+    width: 100%;
+    @include responsive(laptop) {
+      width: 30%;
+    }
+  }
+
+  h2 {
+    color: var(--color-bg);
+    margin-bottom: 20px;
+  }
+
+  p {
+    color: var(--color-bg);
+    ;
+    margin-bottom: 20px;
+  }
+
+  .bretzel-h {
+    max-width: 400px;
+    border-radius: 15px;
+  }
+
+  .btn-acceuil {
+    background-color: var(--color-accent-light);
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .btn-acceuil:hover {
+    background-color: var(--color-accent-dark);
+  }
+
+  /*section-produits*/
+  .produits-acceuil {
+    padding: 50px;
+    text-align: center;
+  }
+
+  .produits-acceuil h2 {
+    color: var(--color-text);
+  }
+
+  .produits-grid-acceuil {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+
+  .produits-grid-acceuil article {
+    background-color: #fff5e6;
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .produits-grid-acceuil img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  /*notre histoire*/
+  .histoire {
+    background-color: #fff5e6;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .histoire h2 {
+    color: var(--color-bg);
+  }
+
+  .intro-histoire {
+    text-align: center;
+    margin: 30px;
+  }
+
+  .histoire-btn {
+    background-color: var(--color-accent-light);
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .histoire-btn:hover {
+    background-color: var(--color-accent-dark);
+  }
+
+  /*responsive*/
+  @media (max-width: 768px) {
+    .acceuil-h {
+      flex-direction: column;
+      text-align: center;
+    }
+    .bretzel-h {
+      margin-top: 1.5rem;
+    }
+  }
+}
