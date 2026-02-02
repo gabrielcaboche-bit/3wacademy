@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f8ff;
+    padding: 40px;
+}
+
+.quiz {
+    max-width: 500px;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.list-answers {
+    background: white;
+    margin: 0;
+    padding: 20px;
+    list-style: none;
+    border-radius: 8px;
+    border: 5px solid #1e90ff
+}
+
+legend {
+    padding: 2px 8px;
+    background-color: #1e90ff;
+    border-radius: 4px;
+    color: white
+}
+
+.container {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: rgb(224, 224, 224);
+}
+
+.list-answers .container input {
+    appearance: none;
+}
+
+.container:has(input.goodOne) {
+    background-color: rgba(144, 238, 144, 0.7);
+    font-weight: bold;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz PHP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <form class="quiz">
+        <?php foreach ($quiz as $question): ?>
+        <fieldset class="list-answers">
+            <legend>
+                <?= $question['question']; ?> <span class="point"><?= $question['point']; ?></span>
+            </legend>
+            <?php foreach ($question['answers'] as $answer): ?>
+                <?php if ($answer === $question['correct_answer']): ?>
+                <label class="container"><?= $answer; ?>
+                    <input type="radio" class="goodOne" name="answer" value="<?= $answer; ?>" checked></input>
+                </label>
+                <?php else: ?>
+                <label class="container"><?= $answer; ?>
+                    <input type="radio" name="answer" value="<?= $answer; ?>"></input>
+                </label>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </fieldset>
+        <?php endforeach; ?>
+    </form>
+</body>
+
+</html>

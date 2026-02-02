@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Exercice 1 - PDO</h1>
+    <?php $query = $pdo->query("SELECT DISTINCT title FROM categories") ?>
+    <ul>
+        <?php while ($category = $query->fetch()): ?>
+            <li><a href="category.php?cat=<?= $category['title'] ?>"><?= $category['title'] ?></a></li>
+        <?php endwhile; ?>
+    </ul>
+</body>
+
+</html>
