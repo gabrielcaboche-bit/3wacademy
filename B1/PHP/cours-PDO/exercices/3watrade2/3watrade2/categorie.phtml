@@ -1,0 +1,27 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <nav>
+            <a href="index.php">Retour aux catégories</a>
+        </nav>
+        <?php if(isset($_GET['id'])): ?>
+            <h1><?= $category['title'] ?></h1>
+            <?php foreach($products as $product): ?>
+                <h2><?= $product['name'] ?></h2>
+                <p><?= $product['description'] ?></p>
+                <p><strong><?= $product['price'] ?> €</strong></p>
+                <hr/>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p>Aucune catégorie n'a été choisie</p>
+        <?php endif; ?>
+        </main>
+    
+</body>
+</html>

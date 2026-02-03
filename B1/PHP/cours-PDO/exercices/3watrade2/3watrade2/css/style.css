@@ -1,0 +1,36 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    max-width : 1024px;
+    width:100%;
+    margin:0 auto;
+}
+.container_cat{
+    width: 768px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cat{
+    width:15%;
+    background-color: darkcyan;
+    color:#fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    cursor:pointer;
+    font-weight: 700;
+}
+
+.cat a{
+    color:#fff;
+    text-decoration: none;
+}
+
+.cat:hover{
+    background-color: cadetblue;
+}

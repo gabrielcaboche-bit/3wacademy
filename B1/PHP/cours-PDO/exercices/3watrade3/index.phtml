@@ -1,0 +1,7 @@
+
+    <div class="container_cat">
+        <?php foreach($categories as $categorie): ?>
+            <p class="cat"><a href="categorie.php?id=<?= $categorie['id'] ?>"><?= $categorie['title'] ?></a></p>
+        <?php endforeach; ?>
+    </div>
+    
