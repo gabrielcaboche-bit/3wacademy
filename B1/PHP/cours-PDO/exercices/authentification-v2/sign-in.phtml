@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
 
-    <title>Connexion</title>
+    <title>sign in </title>
 </head>
 
 <body>
 
-    <h1>Connexion</h1>
+    <h1>sign in</h1>
     <div class="container">
         <form method="post" action="index.php">
             <label for="identifiant">Identifiant :</label>
@@ -20,10 +20,10 @@
             <label for="password">Mot de passe :</label>
             <input type="password" id="password" name="password" required>
 
-            <input type="submit" value="Se connecter">
+            <input type="submit" value="S'inscrire">
         </form>
     </div>
-    <?php if (isset($error)) : ?>
+    <?php if (isset($error)): ?>
         <div class="error">
             <p><?= $error; ?></p>
         </div>

@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+include 'connexion.php';
 // Vérifie si l'utilisateur est déjà connecté, si oui, l'envoie vers la page 'secret'
 if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
     header("Location: secret.php");

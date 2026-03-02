@@ -1,0 +1,76 @@
+<?php ob_start(); ?>
+<h2>Mon compte</h2>
+<div class="user-info">
+    <p><strong>Nom d'utilisateur:</strong> <?= htmlspecialchars($_SESSION['user']['username']) ?></p>
+    <p><strong>Email:</strong> <?= htmlspecialchars($_SESSION['user']['email']) ?></p>
+    <p><strong>Membre depuis:</strong> <?= htmlspecialchars($_SESSION['user']['created_at']) ?></p>
+</div>
+
+<?php if (isset($error)): ?>
+    <div class="alert alert-error">
+        <?= htmlspecialchars($error) ?>
+    </div>
+<?php endif; ?>
+
+<?php if (isset($success)): ?>
+    <div class="alert alert-success">
+        <?= htmlspecialchars($success) ?>
+    </div>
+<?php endif; ?>
+
+<h3>Nouvelle tâche</h3>
+<form method="post" action="index.php?page=task" class="task-form">
+    <div class="form-group">
+        <input type="text" name="title" placeholder="Titre de la tâche" required>
+    </div>
+    <div class="form-group">
+        <label class="switch switch--urgent">
+            <input type="checkbox" name="urgent" value="1">
+            <span class="switch-track" aria-hidden="true"></span>
+            <span class="switch-label">Urgent</span>
+        </label>
+
+        <label class="switch switch--important">
+            <input type="checkbox" name="important" value="1">
+            <span class="switch-track" aria-hidden="true"></span>
+            <span class="switch-label">Important</span>
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Ajouter</button>
+</form>
+
+<h3>Mes tâches</h3>
+<?php if (empty($tasks)): ?>
+    <p class="no-tasks">Aucune tâche pour le moment.</p>
+<?php else: ?>
+    <ul class="task-list">
+        <?php foreach ($tasks as $task): ?>
+            <li class="task-item">
+                <div class="task-info">
+                    <span class="task-title"><?= htmlspecialchars($task['title']) ?></span>
+                    <div class="task-badges">
+                        <?php if ($task['is_urgent']): ?>
+                            <span class="badge badge-urgent">Urgent</span>
+                        <?php endif; ?>
+                        <?php if ($task['is_important']): ?>
+                            <span class="badge badge-important">Important</span>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <div class="task-actions">
+                    <a href="index.php?page=edit-task&id=<?= $task['id'] ?>" class="btn btn-edit">Modifier</a>
+                    <a href="index.php?page=task&done=<?= $task['id'] ?>" class="btn btn-done">Fini</a>
+                    <a href="index.php?page=task&delete=<?= $task['id'] ?>" class="btn btn-delete">Supprimer</a>
+                </div>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+
+<div class="dashboard-footer">
+    <a href="index.php?page=ranking" class="btn btn-secondary">Classement</a>
+    <a href="index.php?page=logout" class="btn btn-danger">Déconnexion</a>
+</div>
+
+<?php $content = ob_get_clean();
+require 'views/layout.phtml'; ?>

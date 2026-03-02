@@ -1,0 +1,3 @@
+Nous avons oublier toute la partie sur l'utilisation de git c'est pour cela qu'il n'y a pas de branches ni meme de commit sur ce projet.
+
+Nous avons travaillé sur le projet en appel et avec live share de vscode. 

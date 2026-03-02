@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire de tâches</title>
+    <link rel="stylesheet" href="public/assets/css/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <?php
+        try {
+            if (isset($content)) {
+                echo $content;
+            } else {
+                echo '<p>Erreur: Contenu non disponible</p>';
+            }
+        } catch (Exception $e) {
+            error_log("Layout error: " . $e->getMessage());
+            echo '<div class="alert alert-error">Erreur lors de l\'affichage du contenu</div>';
+        }
+        ?>
+    </div>
+</body>
+
+</html>
