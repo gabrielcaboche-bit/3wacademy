@@ -1,0 +1,6 @@
+Comme à mon habitude le projet à été fait entierement 
+main et ensuite l'ia est passé derriere sans changer la logique principale.
+
+Elle s'est occupé du css, des commentaires 
+et de me donner des conseils sur comment améliorer 
+certains détails interessant comme le __DIR__ ou les differentes gestions d'erreur.
