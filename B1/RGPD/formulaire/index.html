@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>RGPD | Registration form</title>
+</head>
+
+<body>
+    <div class="formPage">
+        <div class="container">
+            <div class="title">
+                <h1>Bienvenue sur le forum de jeux de rôles</h1>
+            </div>
+        </div>
+        <div class="container form">
+            <div class="pageCounter">
+                <div class="circle active"></div>
+                <div class="line"></div>
+                <div class="circle"><span>2</span></div>
+                <div class="line"></div>
+                <div class="circle"><span>3</span></div>
+            </div>
+            <form id="registrationForm">
+                <div class="formContainer100">
+                    <label for="name">Nom du personnage :</label>
+                    <input type="text" id="characterName" name="characterName" />
+                </div>
+
+                <div class="formContainer50">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" />
+                </div>
+
+                <div class="formContainer50">
+                    <label for="password">Mot de passe :</label>
+                    <input type="password" id="password" name="password" />
+                </div>
+
+
+                <label for="description">Description du personnage :</label>
+                <textarea id="description" name="description"></textarea>
+
+                <label for="avatar" class="custom-file-upload">
+                    Importer un avatar
+                </label>
+                <input type="file" id="avatar" name="avatar" style="display: none" />
+
+                <label for="age">Âge :</label>
+                <input type="number" id="age" name="age" />
+
+                <label for="favoriteGame">Jeu préféré :</label>
+                <input type="text" id="favoriteGame" name="favoriteGame" />
+
+                <div class="consentBox">
+                    <label for="consent">J'accepte la politique de confidentialité</label>
+                    <input type="checkbox" id="consent" name="consent" />
+                </div>
+
+                <div id="alert"></div>
+
+                <button type="submit">S'inscrire</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>

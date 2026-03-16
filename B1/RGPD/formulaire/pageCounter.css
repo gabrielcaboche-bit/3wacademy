@@ -1,0 +1,39 @@
+.pageCounter{
+    max-width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #222222;
+}
+
+.circle.active{
+    width: 10px;
+    height: 10px;
+    background-color:   white;
+    border: 10px solid #007bff !important;
+}
+
+.circle span {
+    text-align: center;
+    line-height: 30px;
+}
+
+.line {
+    width: 50px;
+    height: 4px;
+    background-color: #52525b;
+    border-radius: 2px;
+    display: inline-block;
+    vertical-align: middle;
+}
