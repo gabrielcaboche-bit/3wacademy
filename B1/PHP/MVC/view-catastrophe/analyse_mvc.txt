@@ -1,0 +1,7 @@
+Problèmes d'architecture : Tout est mélangé au même endroit. Si on veut changer un truc, on risque de tout casser. C'est difficile à maintenir.
+
+Failles de sécurité : Il y a des injections SQL car les données ne sont pas protégées. Il y a aussi des failles XSS car on affiche les textes directement sans sécurité.
+
+Pourquoi pas MVC : Le fichier fait tout en même temps. Il n'y a pas de séparation entre la base de données, la logique et l'affichage.
+
+Organisation correcte : Il faut séparer le code. On met le SQL dans des Models, la logique dans des Controllers et le HTML dans des Views. Il faut utiliser des requêtes préparées pour la sécurité.
