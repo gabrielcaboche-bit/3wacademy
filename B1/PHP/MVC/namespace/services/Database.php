@@ -1,6 +1,5 @@
 <?php
 
-namespace database;
 class Database {
     private $host = "localhost";
     private $db   = "blog";

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercice Namespace</title>
+</head>
+<body>
+    <header>
+        <h1>Exercice MVC & Namespaces</h1>
+    </header>
+
+    <main>
+        <?php 
+        if (isset($template) && file_exists($template)) {
+            require_once $template; 
+        } else {
+            echo "Template introuvable.";
+        }
+        ?>
+    </main>
+</body>
+</html>

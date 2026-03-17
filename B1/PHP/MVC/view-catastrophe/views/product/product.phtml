@@ -1,0 +1,14 @@
+<h2>Liste des Produits (via Namespace)</h2>
+
+<ul>
+    <?php if (!empty($products)): ?>
+        <?php foreach ($products as $product): ?>
+            <li>
+                <?= htmlspecialchars($product->getName()) ?> - 
+                <?= htmlspecialchars($product->getPrice()) ?> €
+            </li>
+        <?php endforeach; ?>
+    <?php else: ?>
+        <li>Aucun produit ou erreur de chargement.</li>
+    <?php endif; ?>
+</ul>

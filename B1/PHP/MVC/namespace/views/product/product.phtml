@@ -1,0 +1,10 @@
+<h2>Liste des Produits</h2>
+
+<ul>
+    <?php foreach ($products as $product): ?>
+        <li>
+            <?= htmlspecialchars($product->getName()) ?> - 
+            <?= htmlspecialchars($product->getPrice()) ?> €
+        </li>
+    <?php endforeach; ?>
+</ul>

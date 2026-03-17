@@ -22,3 +22,4 @@ $action = $_GET['action'] ?? 'index';
 if ($action === 'index') {
     $controller->index();
 }
+// Ajouter d'autres actions (add, delete, etc.) si nécessaire
