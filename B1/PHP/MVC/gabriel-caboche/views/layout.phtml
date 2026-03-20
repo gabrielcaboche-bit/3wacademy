@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Anonyme MVC</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; padding: 0; margin: 0; background-color: #f4f4f9; color: #333; display: flex; height: 100vh;}
+        header { border-bottom: 2px solid #ddd; margin-bottom: 20px; padding-bottom: 10px; }
+        aside { width: 300px; background: #fff; border-right: 1px solid #ddd; padding: 20px; display: flex; flex-direction: column; overflow-y: auto; }
+        main { flex: 1; padding: 20px; overflow-y: auto; }
+        .room-list { list-style: none; padding: 0; flex: 1; overflow-y: auto;}
+        .room-list li { margin-bottom: 10px; }
+        .room-list a { text-decoration: none; color: #3498db; font-weight: bold; }
+        .room-list a:hover { text-decoration: underline; }
+        .create-room { margin-top: 20px; border-top: 1px solid #ddd; padding-top: 20px; }
+        .create-room input { width: calc(100% - 20px); padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;}
+        .create-room button { width: 100%; padding: 10px; background: #2ecc71; color: #fff; border: none; cursor: pointer; border-radius: 4px; font-weight: bold;}
+    </style>
+</head>
+<body>
+    <aside>
+        <header>
+            <h2><a href="./" style="text-decoration: none; color: #333;">Salons</a></h2>
+        </header>
+        <ul class="room-list">
+            <?php if (!empty($rooms)): ?>
+                <?php foreach ($rooms as $r): ?>
+                    <li><a href="room?id=<?= $r['id'] ?>"><?= htmlspecialchars($r['name']) ?></a></li>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <p>Aucun salon temporaire.</p>
+            <?php endif; ?>
+        </ul>
+        <div class="create-room">
+            <form action="room/create" method="POST">
+                <input type="text" name="name" placeholder="Nouveau salon..." required autocomplete="off">
+                <button type="submit">Créer</button>
+            </form>
+        </div>
+    </aside>
+    <main>
+        <?php require __DIR__ . '/' . $template . '.phtml'; ?>
+    </main>
+</body>
+</html>

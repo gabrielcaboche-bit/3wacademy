@@ -1,0 +1,13 @@
+<h2>Liste des articles</h2>
+
+<?php if (empty($posts)): ?>
+    <p>Aucun article d'actualité pour le moment.</p>
+<?php else: ?>
+    <?php foreach ($posts as $post): ?>
+        <article class="post">
+            <h3><a href="post?id=<?= $post->getId() ?>"><?= htmlspecialchars($post->getTitle()) ?></a></h3>
+            <p class="date">Publie le : <?= date('d/m/Y H:i', strtotime($post->getCreatedAt())) ?></p>
+            <p><a href="post?id=<?= $post->getId() ?>">Lire la suite...</a></p>
+        </article>
+    <?php endforeach; ?>
+<?php endif; ?>

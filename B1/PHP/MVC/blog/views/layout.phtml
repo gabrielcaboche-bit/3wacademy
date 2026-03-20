@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Mini Blog MVC</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; background-color: #f4f4f9; color: #333; }
+        header { border-bottom: 2px solid #ddd; margin-bottom: 30px; padding-bottom: 10px; }
+        header h1 { margin: 0; font-size: 2.5em; }
+        header a { color: #2c3e50; text-decoration: none; }
+        footer { border-top: 1px solid #ddd; margin-top: 40px; padding-top: 20px; text-align: center; color: #7f8c8d; font-size: 0.9em; }
+        a { color: #3498db; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .post { background: #fff; margin-bottom: 20px; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .post h3 { margin-top: 0; }
+        .post h3 a { color: #2c3e50; }
+        .date { font-size: 0.85em; color: #95a5a6; margin-bottom: 10px; }
+        .post-detail { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .btn-back { display: inline-block; margin-top: 20px; background: #3498db; color: #fff; padding: 10px 15px; border-radius: 5px; text-decoration: none; }
+        .btn-back:hover { background: #2980b9; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="./">Mon Mini Blog</a></h1>
+    </header>
+
+    <main>
+        <?php require __DIR__ . '/' . $template . '.phtml'; ?>
+    </main>
+
+    <footer>
+        <p>&copy; <?= date('Y') ?> Mon Mini Blog MVC</p>
+    </footer>
+</body>
+</html>

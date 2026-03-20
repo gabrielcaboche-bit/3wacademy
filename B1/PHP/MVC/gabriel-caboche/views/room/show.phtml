@@ -1,0 +1,37 @@
+<style>
+    .message { background: #fff; margin-bottom: 15px; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .message.pinned { border-left: 5px solid #f39c12; background: #fffdf5; }
+    .message-form { margin-top: 30px; display: flex; }
+    .message-form input { flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px 0 0 4px; }
+    .message-form button { padding: 10px 20px; background: #3498db; color: #fff; border: none; border-radius: 0 4px 4px 0; cursor: pointer; font-weight: bold;}
+    .pin-btn { background: #f39c12; color: #fff; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; font-size: 0.8em; float: right; }
+    .date { font-size: 0.8em; color: #7f8c8d; }
+</style>
+
+<h2 style="border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 0;"><?= htmlspecialchars($room['name']) ?></h2>
+
+<div class="messages" style="margin-bottom: 20px;">
+    <?php if (empty($messages)): ?>
+        <p>Aucun message dans ce salon. Soyez le premier à écrire !</p>
+    <?php else: ?>
+        <?php foreach ($messages as $msg): ?>
+            <div class="message <?= $msg['is_pinned'] ? 'pinned' : '' ?>">
+                <form action="message/pin" method="POST" style="display:inline;">
+                    <input type="hidden" name="message_id" value="<?= $msg['id'] ?>">
+                    <input type="hidden" name="room_id" value="<?= $room['id'] ?>">
+                    <button type="submit" class="pin-btn">
+                        <?= $msg['is_pinned'] ? 'Désépingler' : 'Épingler' ?>
+                    </button>
+                </form>
+                <p style="margin-top: 0; font-size: 1.1em;"><?= nl2br(htmlspecialchars($msg['content'])) ?></p>
+                <p class="date" style="margin-bottom: 0;">Posté le <?= date('d/m/Y à H:i', strtotime($msg['created_at'])) ?></p>
+            </div>
+        <?php endforeach; ?>
+    <?php endif; ?>
+</div>
+
+<form class="message-form" action="message/create" method="POST">
+    <input type="hidden" name="room_id" value="<?= $room['id'] ?>">
+    <input type="text" name="content" placeholder="Votre message..." required autocomplete="off">
+    <button type="submit">Envoyer</button>
+</form>
