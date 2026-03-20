@@ -1,0 +1,9 @@
+<article class="post-detail">
+    <h2><?= htmlspecialchars($post->getTitle()) ?></h2>
+    <p class="date">Publie le : <?= date('d/m/Y H:i', strtotime($post->getCreatedAt())) ?></p>
+    <div class="content">
+        <p><?= nl2br(htmlspecialchars($post->getContent())) ?></p>
+    </div>
+</article>
+
+<a href="./" class="btn-back">&larr; Retour a l'accueil</a>
