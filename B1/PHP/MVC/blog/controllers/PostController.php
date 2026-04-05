@@ -21,7 +21,6 @@ class PostController {
         $id = (int)$_GET['id'];
         $postRepository = new PostRepository();
         $post = $postRepository->findById($id);
-        echo("id : " . $id);
 
         if (!$post) {
             http_response_code(404);
