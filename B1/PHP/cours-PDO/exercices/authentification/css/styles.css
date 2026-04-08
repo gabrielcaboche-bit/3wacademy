@@ -83,7 +83,7 @@ input[type=submit]:hover {
   min-height: 100vh;
 }
 .secret-container h1 {
-  font-family: "Bitter", serif;
+  font-family: "Roboto", serif;
   line-height: 1.4;
   word-spacing: 3px;
   max-width: 45rem;
@@ -117,6 +117,4 @@ input[type=submit]:hover {
 .secret-container .highlight:hover::after {
   height: 105%;
   width: 105%;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

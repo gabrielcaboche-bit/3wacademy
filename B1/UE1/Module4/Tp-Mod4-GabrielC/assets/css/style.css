@@ -91,9 +91,6 @@ header .container .right-side {
   align-items: center;
   gap: 1rem;
   /* Thème */
-  /* Icône du menu */
-  /* Checkbox du menu (toujours dans le header) */
-  /* Menu déroulant mobile */
 }
 header .container .right-side .theme-wrapper {
   display: flex;
@@ -121,6 +118,9 @@ header .container .right-side .theme-wrapper .theme-toggle i {
 header .container .right-side .theme-wrapper .theme-toggle .fa-moon {
   opacity: 0;
 }
+header .container .right-side {
+  /* Icône du menu */
+}
 header .container .right-side .menu-icon {
   cursor: pointer;
   font-size: 2rem;
@@ -137,6 +137,9 @@ header .container .right-side .menu-icon {
 header .container .right-side .menu-icon .fa-xmark {
   display: none;
 }
+header .container .right-side {
+  /* Checkbox du menu (toujours dans le header) */
+}
 header .container .right-side .nav-toggle {
   display: none;
 }
@@ -148,6 +151,9 @@ header .container .right-side .nav-toggle:checked ~ .menu-icon .fa-xmark {
 }
 header .container .right-side .nav-toggle:checked ~ .main-nav {
   display: flex;
+}
+header .container .right-side {
+  /* Menu déroulant mobile */
 }
 header .container .right-side .main-nav {
   display: none;
@@ -316,6 +322,7 @@ footer p {
   width: 100%;
 }
 .colorBlocks .colorBlock .colorContent {
+  height: -moz-fit-content;
   height: fit-content;
   padding: 10px;
   color: var(--title-color);
@@ -350,8 +357,10 @@ footer p {
 .userInterface .userContainer .image img {
   width: 100%;
   height: 35vw;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .userInterface .userContainer .image .overlayTextImage {
   position: absolute;
@@ -442,11 +451,13 @@ footer p {
   height: 50vw;
 }
 .videosContainer .videos .videoCard .mp4 {
+  height: -moz-max-content !important;
   height: max-content !important;
 }
 .videosContainer .videos .videoCard .videoDesc {
   text-align: initial;
   margin: 0;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 20px;
 }
@@ -490,11 +501,14 @@ footer p {
 }
 .brandCard img {
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .brandCard .brandName {
   width: 100%;
+  height: -moz-max-content;
   height: max-content;
   background: var(--h-f-bg-color);
 }
@@ -560,6 +574,4 @@ body {
 .bg-body {
   background: var(--main-bg-color);
   color: var(--txt-color);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

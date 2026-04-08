@@ -37,10 +37,6 @@ header .container .right-side {
   align-items: center;
   gap: 1rem;
   /* Bouton compte */
-  /* Bouton panier */
-  /* Icône du menu */
-  /* Checkbox du menu */
-  /* Menu principal */
 }
 header .container .right-side .accountButton {
   cursor: pointer;
@@ -53,11 +49,17 @@ header .container .right-side .accountButton {
     opacity: 0;
   }
 }
+header .container .right-side {
+  /* Bouton panier */
+}
 header .container .right-side .cartButton {
   cursor: pointer;
   font-size: 2rem;
   color: white;
   transition: opacity 0.3s ease, transform 0.3s ease;
+}
+header .container .right-side {
+  /* Icône du menu */
 }
 header .container .right-side .menu-icon {
   cursor: pointer;
@@ -74,6 +76,9 @@ header .container .right-side .menu-icon {
 }
 header .container .right-side .menu-icon .fa-xmark {
   display: none;
+}
+header .container .right-side {
+  /* Checkbox du menu */
 }
 header .container .right-side .nav-toggle {
   display: none;
@@ -105,6 +110,9 @@ header .container .right-side .nav-toggle:checked ~ .main-nav .profile-section {
   opacity: 1;
   transform: translateY(0);
   transition-delay: 0.4s;
+}
+header .container .right-side {
+  /* Menu principal */
 }
 header .container .right-side .main-nav {
   display: flex;
@@ -171,7 +179,8 @@ header .container .right-side .main-nav .profile-section img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
 @media screen and (min-width: 1024px) {
@@ -187,6 +196,7 @@ header .container .right-side .main-nav .profile-section .username {
 }
 @media screen and (min-width: 1024px) {
   header .container .right-side .main-nav .profile-section .username {
+    width: -moz-max-content;
     width: max-content;
   }
 }
@@ -201,6 +211,7 @@ header .container .right-side .main-nav .profile-section .profile-link {
 }
 @media screen and (min-width: 1024px) {
   header .container .right-side .main-nav .profile-section .profile-link {
+    width: -moz-max-content;
     width: max-content;
   }
 }
@@ -274,6 +285,7 @@ footer .containerMapText .containerText {
   footer .containerMapText .containerText {
     flex-direction: row;
     flex-wrap: nowrap;
+    height: -moz-fit-content;
     height: fit-content;
   }
 }
@@ -330,9 +342,6 @@ footer .containerMapText .containerMap iframe {
 /*section haut*/
 .accueil {
   background: #1A1A1A;
-  /*section-produits*/
-  /*notre histoire*/
-  /*responsive*/
 }
 .accueil .acceuil-h {
   display: flex;
@@ -371,6 +380,9 @@ footer .containerMapText .containerMap iframe {
 .accueil .btn-acceuil:hover {
   background-color: var(--color-accent-dark);
 }
+.accueil {
+  /*section-produits*/
+}
 .accueil .produits-acceuil {
   padding: 50px;
   text-align: center;
@@ -391,6 +403,9 @@ footer .containerMapText .containerMap iframe {
 .accueil .produits-grid-acceuil img {
   width: 100%;
   border-radius: 10px;
+}
+.accueil {
+  /*notre histoire*/
 }
 .accueil .histoire {
   background-color: #fff5e6;
@@ -413,6 +428,9 @@ footer .containerMapText .containerMap iframe {
 }
 .accueil .histoire-btn:hover {
   background-color: var(--color-accent-dark);
+}
+.accueil {
+  /*responsive*/
 }
 @media (max-width: 768px) {
   .accueil .acceuil-h {
@@ -732,6 +750,9 @@ footer .containerMapText .containerMap iframe {
   font-size: 14px;
   outline: none;
 }
+.form-section .input-group input::-moz-placeholder {
+  color: #aaa;
+}
 .form-section .input-group input::placeholder {
   color: #aaa;
 }
@@ -924,7 +945,8 @@ footer .containerMapText .containerMap iframe {
 .produits img {
   width: 100%;
   height: 250px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .produits h3 {
   color: #B58A40;
@@ -968,7 +990,8 @@ footer .containerMapText .containerMap iframe {
 .nos-menus img {
   width: 100%;
   height: 250px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .nos-menus h3 {
   color: #B58A40;
@@ -1020,7 +1043,6 @@ body {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: all 0.3s ease;
-  /* État ouvert via la checkbox */
 }
 .commande-item .toggle {
   display: none;
@@ -1036,7 +1058,9 @@ body {
   font-size: 1.1rem;
   font-weight: 500;
   transition: background 0.3s ease;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .commande-item .commande-header:hover {
   background-color: #f1e2d0;
@@ -1071,6 +1095,9 @@ body {
   color: #555;
   font-size: 0.9rem;
   padding-bottom: 1rem;
+}
+.commande-item {
+  /* État ouvert via la checkbox */
 }
 .commande-item .toggle:checked ~ .commande-content {
   max-height: 500px;
@@ -1144,6 +1171,4 @@ body {
   overflow-x: hidden;
   width: 100%;
   height: 100vh;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
