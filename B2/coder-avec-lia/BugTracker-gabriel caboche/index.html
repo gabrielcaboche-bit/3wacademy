@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#183b32">
+    <title>BugTracker | Suivi des incidents</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="BugTracker, accueil">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span>bugtracker<span class="brand-period">.</span></span>
+      </a>
+      <span class="topbar-note"><span class="live-dot"></span> Tableau de suivi</span>
+    </header>
+
+    <main id="top" class="shell">
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">ESPACE PROJET <span>/</span> INCIDENTS</p>
+          <h1 id="page-title">Les bugs, <em>en clair.</em></h1>
+          <p class="intro-copy">Recensez les problèmes et gardez le fil de leur résolution.</p>
+        </div>
+        <div class="issue-total" aria-live="polite">
+          <span id="total-count">0</span>
+          <span>incident<span id="total-plural">s</span> au total</span>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Résumé des incidents">
+        <div class="stat stat-open">
+          <span class="stat-label"><span class="status-dot open-dot"></span> Ouverts</span>
+          <strong id="open-count" aria-live="polite">0</strong>
+        </div>
+        <div class="stat stat-closed">
+          <span class="stat-label"><span class="status-dot closed-dot"></span> Fermés</span>
+          <strong id="closed-count" aria-live="polite">0</strong>
+        </div>
+        <div class="stats-note">Un problème à signaler ?<br><span>Ajoutez-le au tableau.</span></div>
+      </section>
+
+      <div class="workspace">
+        <aside class="form-panel" aria-labelledby="form-title">
+          <div class="section-heading">
+            <span class="step-number">01</span>
+            <h2 id="form-title">Nouveau bug</h2>
+          </div>
+          <form id="bug-form">
+            <label for="bug-title">Titre</label>
+            <input id="bug-title" name="title" type="text" maxlength="90" placeholder="Ex. Erreur formulaire" required>
+
+            <label for="bug-description">Description</label>
+            <textarea id="bug-description" name="description" rows="4" maxlength="500" placeholder="Que se passe-t-il ?" required></textarea>
+
+            <label for="bug-priority">Priorité</label>
+            <select id="bug-priority" name="priority">
+              <option value="low">Basse</option>
+              <option value="medium" selected>Moyenne</option>
+              <option value="high">Haute</option>
+            </select>
+
+            <button class="add-button" type="submit"><span aria-hidden="true">+</span> Ajouter le bug</button>
+            <p id="form-feedback" class="form-feedback" role="status" aria-live="polite"></p>
+          </form>
+        </aside>
+
+        <section class="list-panel" aria-labelledby="list-title">
+          <div class="list-heading">
+            <div class="section-heading">
+              <span class="step-number">02</span>
+              <h2 id="list-title">Tous les incidents</h2>
+            </div>
+            <span id="visible-count" class="visible-count">0 affiché</span>
+          </div>
+
+          <div class="filters">
+            <label class="search-field" for="search-title">
+              <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><circle cx="8.8" cy="8.8" r="5.8"/><path d="m13.2 13.2 4 4"/></svg>
+              <input id="search-title" type="search" placeholder="Rechercher un titre..." autocomplete="off">
+            </label>
+            <label class="priority-filter" for="filter-priority">
+              <span class="sr-only">Filtrer par priorité</span>
+              <select id="filter-priority">
+                <option value="all">Toutes priorités</option>
+                <option value="high">Haute</option>
+                <option value="medium">Moyenne</option>
+                <option value="low">Basse</option>
+              </select>
+            </label>
+          </div>
+
+          <div id="bug-list" class="bug-list" aria-live="polite"></div>
+          <div id="empty-state" class="empty-state" hidden>
+            <span class="empty-mark" aria-hidden="true">—</span>
+            <h3 id="empty-title">Tout est calme.</h3>
+            <p id="empty-copy">Ajoutez un incident pour commencer le suivi.</p>
+          </div>
+        </section>
+      </div>
+      <footer class="page-footer"><span>BUGTRACKER</span><span>Chaque détail compte.</span></footer>
+    </main>
+  </body>
+</html>

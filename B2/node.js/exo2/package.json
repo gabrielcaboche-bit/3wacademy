@@ -1,0 +1,10 @@
+{
+  "name": "exo2",
+  "version": "1.0.0",
+  "description": "Émetteur d’événements personnalisé avec EventEmitter",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node app.js"
+  }
+}

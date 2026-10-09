@@ -1,0 +1,12 @@
+FROM python:3.9-slim
+
+RUN mkdir -p /app/data /app/logs
+
+VOLUME ["/app/logs"]
+
+WORKDIR /app
+
+EXPOSE 5000
+
+CMD ["tail", "-f", "/dev/null"]
+
