@@ -1,0 +1,14 @@
+{
+  "name": "bibliotheque-municipale",
+  "version": "1.0.0",
+  "description": "Application de gestion d'une bibliothèque municipale avec API REST et rendu SSR.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.3"
+  }
+}

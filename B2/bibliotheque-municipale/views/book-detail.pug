@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  a.back-link(href="/") Retour au catalogue
+  if error
+    section.detail-error
+      p.eyebrow Catalogue communal
+      h1 Livre introuvable
+      p= error
+  else
+    article.book-detail
+      p.eyebrow Détail de l'ouvrage · ID #{book.id}
+      h1= book.titre
+      p.detail-author= book.auteur
+      p.availability(class=book.disponible ? 'is-available' : 'is-unavailable')
+        span.status-dot
+        |  #{book.disponible ? 'Disponible à l’emprunt' : 'Indisponible à l’emprunt'}

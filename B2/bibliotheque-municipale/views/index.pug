@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  section.page-heading
+    p.eyebrow Catalogue communal
+    h1 Gestion de la bibliothèque municipale
+    p.intro Consultez les ouvrages et leur disponibilité.
+
+  if added
+    p.notice.success(role="status") Le livre a été ajouté avec succès.
+  if error
+    p.notice.error(role="alert")= error
+
+  .catalogue-header
+    h2 Catalogue
+    span.count #{books.length} ouvrage(s)
+
+  if books.length
+    ul.book-list
+      each book in books
+        li.book-row
+          .book-main
+            a.book-title(href=`/books/view/${book.id}`)= book.titre
+            p.book-author= book.auteur
+          span.availability(class=book.disponible ? 'is-available' : 'is-unavailable')
+            span.status-dot
+            |  #{book.disponible ? 'Disponible' : 'Indisponible'}
+  else
+    p.empty-state La bibliothèque ne contient aucun livre.
+
+  section.add-section
+    .section-heading
+      p.eyebrow Nouvelle entrée
+      h2 Ajouter un livre
+    form.add-form(action="/add-book" method="post")
+      label(for="titre") Titre
+      input#titre(type="text" name="titre" required)
+      label(for="auteur") Auteur
+      input#auteur(type="text" name="auteur" required)
+      label.checkbox-label(for="disponible")
+        input#disponible(type="checkbox" name="disponible" value="true" checked)
+        span Disponible à l'emprunt
+      button(type="submit") Ajouter au catalogue

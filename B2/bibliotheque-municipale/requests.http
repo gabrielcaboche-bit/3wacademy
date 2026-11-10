@@ -1,0 +1,31 @@
+@baseUrl = http://localhost:3000
+
+### Lire tous les livres
+GET {{baseUrl}}/books
+Accept: application/json
+
+### Ajouter un livre
+POST {{baseUrl}}/books
+Content-Type: application/json
+
+{
+  "titre": "La Peste",
+  "auteur": "Albert Camus",
+  "disponible": true
+}
+
+### Lire un livre (remplacer 1 par un identifiant existant)
+GET {{baseUrl}}/books/1
+Accept: application/json
+
+### Modifier un livre (champs absents conservés; stratégie de fusion documentée)
+PUT {{baseUrl}}/books/1
+Content-Type: application/json
+
+{
+  "disponible": false
+}
+
+### Supprimer un livre (remplacer 1 par un identifiant existant)
+DELETE {{baseUrl}}/books/1
+Accept: application/json

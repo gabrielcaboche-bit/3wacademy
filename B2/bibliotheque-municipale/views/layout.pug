@@ -1,0 +1,18 @@
+doctype html
+html(lang="fr")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title #{title} | Bibliothèque municipale
+    link(rel="stylesheet" href="/css/style.css")
+  body
+    header.site-header
+      a.brand(href="/" aria-label="Accueil de la bibliothèque")
+        span.brand-mark BM
+        span.brand-name Bibliothèque municipale
+      span.header-note Catalogue public
+    main.page-shell
+      block content
+    footer.site-footer
+      span Bibliothèque municipale
+      span Catalogue des ouvrages
